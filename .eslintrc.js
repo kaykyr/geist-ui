@@ -3,6 +3,7 @@ module.exports = {
 		react: {
 			version: 'detect',
 		},
+		'mdx/code-blocks': true,
 	},
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
@@ -12,6 +13,7 @@ module.exports = {
 	},
 	plugins: ['@typescript-eslint/eslint-plugin'],
 	extends: [
+		'plugin:mdx/recommended',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:prettier/recommended',
 		'eslint-config-ts-lambdas',
