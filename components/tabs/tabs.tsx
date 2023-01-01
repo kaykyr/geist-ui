@@ -28,6 +28,7 @@ interface Props {
 	align?: CSSProperties['justifyContent']
 	activeClassName?: string
 	activeStyles?: CSSProperties
+    noContent?: boolean
 }
 
 const defaultProps = {
@@ -50,6 +51,7 @@ const TabsComponent: React.FC<React.PropsWithChildren<TabsProps>> = ({
 	value,
 	hideDivider,
 	hideBorder,
+    noContent,
 	children,
 	onChange,
 	className,
@@ -143,7 +145,7 @@ const TabsComponent: React.FC<React.PropsWithChildren<TabsProps>> = ({
 						))}
 					</div>
 				</header>
-				{children && <div className="content">{children}</div>}
+				{ noContent ? <>{children}</> : (<div className="content">{children}</div>) }
 				<style jsx>{`
 					.tabs {
 						font-size: ${SCALES.font(1)};
