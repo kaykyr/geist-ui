@@ -3,8 +3,8 @@ import { Textarea, Spacer, useInput, Button, Code } from 'components'
 import { useState } from 'react'
 
 export const meta = {
-  title: 'Textarea',
-  group: 'Data Entry',
+	title: 'Textarea',
+	group: 'Data Entry',
 }
 
 ## Textarea
@@ -12,27 +12,27 @@ export const meta = {
 Retrieve multi-line user input.
 
 <Playground
-  desc="Basic usage."
-  scope={{ Textarea }}
-  code={`
+	desc="Basic usage."
+	scope={{ Textarea }}
+	code={`
 <Textarea placeholder="Please enter a description." />
 `}
 />
 
 <Playground
-  title="disabled"
-  desc="Disable interactive textarea."
-  scope={{ Textarea }}
-  code={`
+	title="disabled"
+	desc="Disable interactive textarea."
+	scope={{ Textarea }}
+	code={`
 <Textarea width="100%" disabled placeholder="Now is the optimal workflow for frontend teams. All-in-one: Static and JAMstack deployment, Serverless Functions, and Global CDN." />
 `}
 />
 
 <Playground
-  title="Type"
-  desc="Differentiate states by color."
-  scope={{ Textarea, Spacer }}
-  code={`
+	title="Type"
+	desc="Differentiate states by color."
+	scope={{ Textarea, Spacer }}
+	code={`
 <>
   <Textarea type="success" height="65px" value="Success" />
   <Spacer w={.5} inline />
@@ -46,10 +46,10 @@ Retrieve multi-line user input.
 />
 
 <Playground
-  title="get change"
-  desc="Capture changes in textarea."
-  scope={{ Textarea, useState }}
-  code={`
+	title="get change"
+	desc="Capture changes in textarea."
+	scope={{ Textarea, useState }}
+	code={`
 () => {
   const [value, setValue] = useState()
   const handler = (e) => {
@@ -67,14 +67,14 @@ Retrieve multi-line user input.
 />
 
 <Playground
-  title={
-    <>
-      With <Code>useInput</Code>
-    </>
-  }
-  desc="Use `hooks` to capture changes."
-  scope={{ Textarea, useInput, Button, Spacer }}
-  code={`
+	title={
+		<>
+			With <Code>useInput</Code>
+		</>
+	}
+	desc="Use `hooks` to capture changes."
+	scope={{ Textarea, useInput, Button, Spacer }}
+	code={`
 () => {
   const { setState, reset, bindings } = useInput('Now is the optimal workflow for frontend teams. All-in-one: Static and JAMstack deployment, Serverless Functions, and Global CDN.')
   return (
@@ -91,10 +91,10 @@ Retrieve multi-line user input.
 />
 
 <Playground
-  title="Imperative API"
-  desc="Update component in an uncontrolled way."
-  scope={{ Textarea, Spacer, Button }}
-  code={`
+	title="Imperative API"
+	desc="Update component in an uncontrolled way."
+	scope={{ Textarea, Spacer, Button }}
+	code={`
 () => {
   const ref = React.useRef(null)
   const setChange = () => {
@@ -130,14 +130,14 @@ Retrieve multi-line user input.
 
 ```ts
 type useInput = (initialValue: string) => {
-  state: string
-  setState: Dispatch<SetStateAction<string>>
-  currentRef: MutableRefObject<string>
-  reset: () => void
-  bindings: {
-    value: string
-    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
-  }
+	state: string
+	setState: Dispatch<SetStateAction<string>>
+	currentRef: MutableRefObject<string>
+	reset: () => void
+	bindings: {
+		value: string
+		onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
+	}
 }
 ```
 
@@ -150,7 +150,13 @@ type TextareaTypes = 'default' | 'secondary' | 'success' | 'warning' | 'error'
 <Attributes.Title>CSSResize</Attributes.Title>
 
 ```ts
-type CSSResize = 'none' | 'both' | 'horizontal' | 'vertical' | 'initial' | 'inherit'
+type CSSResize =
+	| 'none'
+	| 'both'
+	| 'horizontal'
+	| 'vertical'
+	| 'initial'
+	| 'inherit'
 ```
 
 </Attributes>

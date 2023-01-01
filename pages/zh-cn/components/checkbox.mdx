@@ -2,8 +2,8 @@ import { Layout, Playground, Attributes } from 'lib/components'
 import { Checkbox, Spacer } from 'components'
 
 export const meta = {
-  title: '复选框 Checkbox',
-  group: '数据录入',
+	title: '复选框 Checkbox',
+	group: '数据录入',
 }
 
 ## Checkbox / 复选框
@@ -11,17 +11,17 @@ export const meta = {
 用于表示多个可选项。
 
 <Playground
-  desc="设置 `initialChecked` 属性初始的状态。"
-  scope={{ Checkbox }}
-  code={`
+	desc="设置 `initialChecked` 属性初始的状态。"
+	scope={{ Checkbox }}
+	code={`
   <Checkbox initialChecked={true}>墨西哥</Checkbox>
 `}
 />
 
 <Playground
-  title="禁用的"
-  scope={{ Checkbox, Spacer }}
-  code={`
+	title="禁用的"
+	scope={{ Checkbox, Spacer }}
+	code={`
 <>
   <Checkbox>悉尼</Checkbox>
   <Spacer h={.5} />
@@ -31,10 +31,10 @@ export const meta = {
 />
 
 <Playground
-  title="组"
-  desc="管理一组 `Checkbox`。"
-  scope={{ Checkbox, Spacer }}
-  code={`
+	title="组"
+	desc="管理一组 `Checkbox`。"
+	scope={{ Checkbox, Spacer }}
+	code={`
 () => {
   const handler = value => {
     console.log(value)
@@ -76,14 +76,14 @@ export const meta = {
 
 ```ts
 interface CheckboxEventTarget {
-  checked: boolean
+	checked: boolean
 }
 
 export interface CheckboxEvent {
-  target: CheckboxEventTarget
-  stopPropagation: () => void
-  preventDefault: () => void
-  nativeEvent: React.ChangeEvent
+	target: CheckboxEventTarget
+	stopPropagation: () => void
+	preventDefault: () => void
+	nativeEvent: React.ChangeEvent
 }
 ```
 

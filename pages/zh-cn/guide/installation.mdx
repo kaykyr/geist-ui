@@ -2,9 +2,9 @@ import Layout from 'lib/components/layout'
 import { Code, Spacer, Dot, Tabs, Snippet, Text } from 'components'
 
 export const meta = {
-  title: '安装',
-  group: '快速上手',
-  index: 10,
+	title: '安装',
+	group: '快速上手',
+	index: 10,
 }
 
 ## 安装
@@ -17,20 +17,20 @@ export const meta = {
 此外，Geist 是基于 React 框架的组件库，这意味着您也必须了解如何 [创建项目](https://zh-hans.reactjs.org/docs/hello-world.html) 与框架基础知识。
 
 <h4>
-  <Dot type="success">安装依赖</Dot>
+	<Dot type="success">安装依赖</Dot>
 </h4>
 
 <Tabs initialValue="yarn" hideDivider hideBorder align="flex-end" mt="-46px">
-  <Tabs.Item label="Yarn" value="yarn">
-    <Snippet>yarn add @geist-ui/core</Snippet>
-  </Tabs.Item>
-  <Tabs.Item label="Npm" value="npm">
-    <Snippet>npm i @geist-ui/core</Snippet>
-  </Tabs.Item>
+	<Tabs.Item label="Yarn" value="yarn">
+		<Snippet>yarn add @geist-ui/core</Snippet>
+	</Tabs.Item>
+	<Tabs.Item label="Npm" value="npm">
+		<Snippet>npm i @geist-ui/core</Snippet>
+	</Tabs.Item>
 </Tabs>
 <Spacer h={0.5} />
 <h4>
-  <Dot type="success">添加引用</Dot>
+	<Dot type="success">添加引用</Dot>
 </h4>
 
 ```jsx
@@ -38,26 +38,26 @@ export const meta = {
 import { GeistProvider, CssBaseline } from '@geist-ui/core'
 
 export default () => (
-  <GeistProvider>
-    <CssBaseline /> // --> 基础样式
-    <AppComponent /> // --> 你的根组件
-  </GeistProvider>
+	<GeistProvider>
+		<CssBaseline /> // --> 基础样式
+		<AppComponent /> // --> 你的根组件
+	</GeistProvider>
 )
 ```
 
 <Spacer h={0} mb="8px" />
 <h4>
-  <Dot type="success">使用组件</Dot>
+	<Dot type="success">使用组件</Dot>
 </h4>
 
 ```jsx
 import { Button, Page, Text } from '@geist-ui/core'
 
 const Home = () => (
-  <Page>
-    <Text h1>Home Page</Text>
-    <Button>Submit</Button>
-  </Page>
+	<Page>
+		<Text h1>Home Page</Text>
+		<Button>Submit</Button>
+	</Page>
 )
 ```
 
@@ -78,12 +78,12 @@ const Home = () => (
 import { GeistProvider, CssBaseline } from '@geist-ui/core'
 
 const App = ({ Component, pageProps }) => {
-  return (
-    <GeistProvider>
-      <CssBaseline />
-      <Component {...pageProps} />
-    </GeistProvider>
-  )
+	return (
+		<GeistProvider>
+			<CssBaseline />
+			<Component {...pageProps} />
+		</GeistProvider>
+	)
 }
 
 export default App
@@ -94,10 +94,15 @@ export default App
 此外，我们也提供了一个完整的 [Next.js 应用](https://github.com/geist-org/geist-ui/blob/master/examples/create-next-app/README.md) 示例以供参考。
 
 <Text h3>
-  在 Windows 上渲染字体{' '}
-  <Text span type="secondary" font=".75em" style={{ textTransform: 'uppercase' }}>
-    [可选的]
-  </Text>
+	在 Windows 上渲染字体{' '}
+	<Text
+		span
+		type="secondary"
+		font=".75em"
+		style={{ textTransform: 'uppercase' }}
+	>
+		[可选的]
+	</Text>
 </Text>
 
 Web 应用中的一些字体在 _Windows_ 平台上无法得到最好的渲染效果，
@@ -113,8 +118,8 @@ Web 应用中的一些字体在 _Windows_ 平台上无法得到最好的渲染�
 #### 添加 `Inter Font` 到你的项目中:
 
 <Code block my={0} width="100%">
-  <span className="token keyword module">import</span>{' '}
-  <span className="token string">'inter-ui/inter.css'</span>
+	<span className="token keyword module">import</span>{' '}
+	<span className="token string">'inter-ui/inter.css'</span>
 </Code>
 
 export default ({ children }) => <Layout meta={meta}>{children}</Layout>

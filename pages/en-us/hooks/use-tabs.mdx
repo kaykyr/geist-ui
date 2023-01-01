@@ -2,9 +2,9 @@ import { Layout, Playground, Attributes } from 'lib/components'
 import { useTabs, Tabs, Button, Spacer } from 'components'
 
 export const meta = {
-  title: 'useTabs',
-  group: 'Enhancement',
-  index: 11,
+	title: 'useTabs',
+	group: 'Enhancement',
+	index: 11,
 }
 
 ## useTabs
@@ -13,9 +13,9 @@ export const meta = {
 Using this hooks behaves the same as if you had added `React.useState` manually.
 
 <Playground
-  desc="Control components with Hooks."
-  scope={{ Tabs, Button, Spacer, useTabs }}
-  code={`
+	desc="Control components with Hooks."
+	scope={{ Tabs, Button, Spacer, useTabs }}
+	code={`
 () => {
   const { setState, bindings } = useTabs('1')
   return (
@@ -39,13 +39,13 @@ Using this hooks behaves the same as if you had added `React.useState` manually.
 
 ```ts
 type useTabs = (initialValue: string) => {
-  state: string
-  setState: Dispatch<SetStateAction<string>>
-  currentRef: MutableRefObject<string>
-  bindings: {
-    value: string
-    onChange: (val: string) => void
-  }
+	state: string
+	setState: Dispatch<SetStateAction<string>>
+	currentRef: MutableRefObject<string>
+	bindings: {
+		value: string
+		onChange: (val: string) => void
+	}
 }
 ```
 

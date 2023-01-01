@@ -3,8 +3,8 @@ import { Slider, Spacer } from 'components'
 import { useState } from 'react'
 
 export const meta = {
-  title: 'Slider',
-  group: 'Data Entry',
+	title: 'Slider',
+	group: 'Data Entry',
 }
 
 ## Slider
@@ -12,18 +12,18 @@ export const meta = {
 Display the current value and an inputable range.
 
 <Playground
-  desc="Accept clicks or drag actions."
-  scope={{ Slider }}
-  code={`
+	desc="Accept clicks or drag actions."
+	scope={{ Slider }}
+	code={`
 <Slider initialValue={20} />
 `}
 />
 
 <Playground
-  title="Type"
-  desc="Differentiate states by color."
-  scope={{ Slider, Spacer }}
-  code={`
+	title="Type"
+	desc="Differentiate states by color."
+	scope={{ Slider, Spacer }}
+	code={`
     <>
       <Slider type="default" initialValue={20} />
       <Spacer />
@@ -37,28 +37,28 @@ Display the current value and an inputable range.
 />
 
 <Playground
-  title="Disabled"
-  desc="Do not respond to drag and click."
-  scope={{ Slider }}
-  code={`
+	title="Disabled"
+	desc="Do not respond to drag and click."
+	scope={{ Slider }}
+	code={`
 <Slider initialValue={50} disabled />
 `}
 />
 
 <Playground
-  title="Step"
-  desc="Different granularity."
-  scope={{ Slider }}
-  code={`
+	title="Step"
+	desc="Different granularity."
+	scope={{ Slider }}
+	code={`
 <Slider step={10} showMarkers width="75%" />
 `}
 />
 
 <Playground
-  title="Range"
-  desc="Specifies the maximum or minimum value of the Slider."
-  scope={{ Slider, Spacer }}
-  code={`
+	title="Range"
+	desc="Specifies the maximum or minimum value of the Slider."
+	scope={{ Slider, Spacer }}
+	code={`
 <>
   <Slider step={5} max={50} min={10} initialValue={25} showMarkers width="75%" />
   <Spacer />
@@ -68,10 +68,10 @@ Display the current value and an inputable range.
 />
 
 <Playground
-  title="Event"
-  desc="Get event when slide."
-  scope={{ Slider, useState }}
-  code={`
+	title="Event"
+	desc="Get event when slide."
+	scope={{ Slider, useState }}
+	code={`
 () => {
   const [value, setValue] = useState()
   const handler = val => {

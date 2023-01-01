@@ -2,8 +2,8 @@ import { Layout, Playground, Attributes } from 'lib/components'
 import { Card, Fieldset, Button, Text, Divider } from 'components'
 
 export const meta = {
-  title: 'Fieldset',
-  group: 'Surfaces',
+	title: 'Fieldset',
+	group: 'Surfaces',
 }
 
 ## Fieldset
@@ -11,10 +11,10 @@ export const meta = {
 Display a collection of related information in a single unit.
 
 <Playground
-  title="Basic"
-  desc="Add custom buttons."
-  scope={{ Fieldset, Button }}
-  code={`
+	title="Basic"
+	desc="Add custom buttons."
+	scope={{ Fieldset, Button }}
+	code={`
 <Fieldset>
   <Fieldset.Title>HTTP is simple</Fieldset.Title>
   <Fieldset.Subtitle>HTTP is generally designed to be simple and human readable, even with the added complexity introduced in HTTP/2 by encapsulating HTTP messages into frames. HTTP messages can be read and understood by humans, providing easier testing for developers, and reduced complexity for newcomers.</Fieldset.Subtitle>
@@ -27,10 +27,10 @@ Display a collection of related information in a single unit.
 />
 
 <Playground
-  title="Custom Text"
-  desc="Representation in different situations."
-  scope={{ Fieldset, Button, Text }}
-  code={`
+	title="Custom Text"
+	desc="Representation in different situations."
+	scope={{ Fieldset, Button, Text }}
+	code={`
 <Fieldset>
   <Fieldset.Title>HTTP is extensible</Fieldset.Title>
   <Fieldset.Subtitle>Introduced in HTTP/1.0, HTTP headers make this protocol easy to extend and experiment with. </Fieldset.Subtitle>
@@ -43,10 +43,10 @@ Display a collection of related information in a single unit.
 />
 
 <Playground
-  title="Tabs"
-  desc="Show multiple Fieldset."
-  scope={{ Fieldset, Button }}
-  code={`
+	title="Tabs"
+	desc="Show multiple Fieldset."
+	scope={{ Fieldset, Button }}
+	code={`
 () => {
   const handler = v => console.log(v)
   return (
@@ -82,10 +82,10 @@ Display a collection of related information in a single unit.
 />
 
 <Playground
-  title="With Divider"
-  desc="Use `Divider` and `Fieldset.Content` to combine different layouts."
-  scope={{ Fieldset, Divider }}
-  code={`
+	title="With Divider"
+	desc="Use `Divider` and `Fieldset.Content` to combine different layouts."
+	scope={{ Fieldset, Divider }}
+	code={`
 <Fieldset>
   <Fieldset.Content style={{ paddingTop: '10pt', paddingBottom: '10pt' }}>
     <h4>Prerequisites</h4>
@@ -114,7 +114,9 @@ Display a collection of related information in a single unit.
 | **subtitle** | subtitle of fieldset               | `ReactNode` / `string`   | -                          | -       |
 | ...          | native props                       | `FieldsetHTMLAttributes` | `'name', 'className', ...` | -       |
 
-<Attributes.Title alias="Fieldset.Body">Fieldset.Content.Props</Attributes.Title>
+<Attributes.Title alias="Fieldset.Body">
+	Fieldset.Content.Props
+</Attributes.Title>
 
 | Attribute | Description  | Type             | Accepted values | Default |
 | --------- | ------------ | ---------------- | --------------- | ------- |

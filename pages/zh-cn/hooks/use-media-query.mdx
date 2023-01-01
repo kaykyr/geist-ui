@@ -3,8 +3,8 @@ import { useMediaQuery, Link, Code, Spacer } from 'components'
 import NextLink from 'next/link'
 
 export const meta = {
-  title: '媒体查询 useMediaQuery',
-  group: '实用工具',
+	title: '媒体查询 useMediaQuery',
+	group: '实用工具',
 }
 
 ## useMediaQuery / 媒体查询
@@ -13,8 +13,8 @@ export const meta = {
 请尝试 <NextLink href="/zh-cn/components/grid"><Link color>栅格组件</Link></NextLink>。
 
 <Playground
-  scope={{ useMediaQuery, Code }}
-  code={`
+	scope={{ useMediaQuery, Code }}
+	code={`
 () => {
   const isXS = useMediaQuery('xs')
   const isSM = useMediaQuery('sm')
@@ -31,10 +31,10 @@ export const meta = {
 />
 
 <Playground
-  title="匹配类型"
-  desc="你可以选择向上或是向下匹配媒体查询。"
-  scope={{ useMediaQuery, Code }}
-  code={`
+	title="匹配类型"
+	desc="你可以选择向上或是向下匹配媒体查询。"
+	scope={{ useMediaQuery, Code }}
+	code={`
 () => {
   const upMD = useMediaQuery('md', { match: 'up' })
   return (
@@ -47,30 +47,30 @@ export const meta = {
 />
 
 <PlaygroundTitle
-  title="定制断点"
-  desc="您可以覆盖 `@geist-ui/core` 组件库默认的断点值。"
+	title="定制断点"
+	desc="您可以覆盖 `@geist-ui/core` 组件库默认的断点值。"
 />
 
 ```tsx
 const breakpoints: GeistUIThemesBreakpoints = {
-  xs: { min: '0', max: '650px' },
-  sm: { min: '650px', max: '900px' },
-  md: { min: '900px', max: '1280px' },
-  lg: { min: '1280px', max: '1920px' },
-  xl: { min: '1920px', max: '10000px' },
+	xs: { min: '0', max: '650px' },
+	sm: { min: '650px', max: '900px' },
+	md: { min: '900px', max: '1280px' },
+	lg: { min: '1280px', max: '1920px' },
+	xl: { min: '1920px', max: '10000px' },
 }
 
 const App = () => {
-  const myTheme = Themes.createFromLight({
-    type: 'myTheme',
-    breakpoints,
-  })
-  return (
-    <GeistProvider themes={[myTheme]} themeType="myTheme">
-      <CssBaseline />
-      <AppComponent />
-    </GeistProvider>
-  )
+	const myTheme = Themes.createFromLight({
+		type: 'myTheme',
+		breakpoints,
+	})
+	return (
+		<GeistProvider themes={[myTheme]} themeType="myTheme">
+			<CssBaseline />
+			<AppComponent />
+		</GeistProvider>
+	)
 }
 ```
 
@@ -81,12 +81,14 @@ const App = () => {
 type ResponsiveBreakpoint = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'mobile'
 
 type ResponsiveOptions = {
-  match?: 'up' | 'down'
-  ssrMatchMedia?: (query: string) => { matches: boolean }
+	match?: 'up' | 'down'
+	ssrMatchMedia?: (query: string) => { matches: boolean }
 }
 
-const useMediaQuery = (breakpoint: ResponsiveBreakpoint, options?: ResponsiveOptions) =>
-  boolean
+const useMediaQuery = (
+	breakpoint: ResponsiveBreakpoint,
+	options?: ResponsiveOptions,
+) => boolean
 ```
 
 </Attributes>

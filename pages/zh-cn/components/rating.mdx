@@ -4,8 +4,8 @@ import { useState } from 'react'
 import { Award, Github } from '@geist-ui/icons'
 
 export const meta = {
-  title: '评分 Rating',
-  group: '反馈',
+	title: '评分 Rating',
+	group: '反馈',
 }
 
 ## Rating / 评分
@@ -13,9 +13,9 @@ export const meta = {
 以多个图标展示可互动的评分。
 
 <Playground
-  desc="设置初始值与回调事件。"
-  scope={{ Rating, Grid, useState }}
-  code={`
+	desc="设置初始值与回调事件。"
+	scope={{ Rating, Grid, useState }}
+	code={`
 () => {
   const [value, setValue] = useState(1)
   const [locked, setLocked] = useState(false)
@@ -33,10 +33,10 @@ export const meta = {
 />
 
 <Playground
-  title="类型"
-  desc="通过 `type` 属性展示不同的评分组件。"
-  scope={{ Rating, Grid }}
-  code={`
+	title="类型"
+	desc="通过 `type` 属性展示不同的评分组件。"
+	scope={{ Rating, Grid }}
+	code={`
 <Grid.Container gap={2} justify="center">
   <Grid xs={24} sm={24} md={8} justify="center"><Rating type="success"/></Grid>
   <Grid xs={24} sm={12} md={8} justify="center"><Rating type="error"/></Grid>
@@ -46,10 +46,10 @@ export const meta = {
 />
 
 <Playground
-  title="最大数量"
-  desc="定制图标的最大数量。"
-  scope={{ Rating, Spacer }}
-  code={`
+	title="最大数量"
+	desc="定制图标的最大数量。"
+	scope={{ Rating, Spacer }}
+	code={`
 <>
   <Rating count={2} />
   <Spacer h={0.5} />
@@ -61,10 +61,10 @@ export const meta = {
 />
 
 <Playground
-  title="图标"
-  desc="以自定义 SVG 图标代替默认的星星图案。"
-  scope={{ Rating, Award, Github, Spacer }}
-  code={`
+	title="图标"
+	desc="以自定义 SVG 图标代替默认的星星图案。"
+	scope={{ Rating, Award, Github, Spacer }}
+	code={`
 <>
   <Rating
      value={4}

@@ -10,5 +10,5 @@ const __html = `
 `.trim()
 
 export const Greeting: React.FC<unknown> = () => (
-  <code className="language-jsx" dangerouslySetInnerHTML={{ __html }} />
+	<code className="language-jsx" dangerouslySetInnerHTML={{ __html }} />
 )

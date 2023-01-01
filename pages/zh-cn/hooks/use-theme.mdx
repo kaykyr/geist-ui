@@ -2,9 +2,9 @@ import { Layout, Playground, Attributes } from 'lib/components'
 import { Button, useTheme } from 'components'
 
 export const meta = {
-  title: '主题的状态 useTheme',
-  group: '开发者',
-  index: 100,
+	title: '主题的状态 useTheme',
+	group: '开发者',
+	index: 100,
 }
 
 ## useTheme / 主题的状态
@@ -18,9 +18,9 @@ Hooks 获取的值与 `Themes.getPresets` 是相同的。
 你会发现例子中组件的颜色将总是跟随 Geist 主题而变化。
 
 <Playground
-  scope={{ useTheme, Button }}
-  desc=""
-  code={`
+	scope={{ useTheme, Button }}
+	desc=""
+	code={`
 () => {
   const theme = useTheme()
   return (
@@ -49,12 +49,12 @@ Hooks 获取的值与 `Themes.getPresets` 是相同的。
 const theme: GeistUIThemes = useTheme()
 
 export type GeistUIThemes = {
-  type: string
-  font: GeistUIThemesFont
-  layout: GeistUIThemesLayout
-  palette: GeistUIThemesPalette
-  breakpoints: GeistUIThemesBreakpoints
-  expressiveness: GeistUIThemesExpressiveness
+	type: string
+	font: GeistUIThemesFont
+	layout: GeistUIThemesLayout
+	palette: GeistUIThemesPalette
+	breakpoints: GeistUIThemesBreakpoints
+	expressiveness: GeistUIThemesExpressiveness
 }
 ```
 
@@ -62,14 +62,14 @@ export type GeistUIThemes = {
 
 ```ts
 import {
-  GeistUIThemes,
-  GeistUIThemesFont,
-  GeistUIThemesPalette,
-  GeistUIThemesExpressiveness,
-  GeistUIThemesLayout,
+	GeistUIThemes,
+	GeistUIThemesFont,
+	GeistUIThemesPalette,
+	GeistUIThemesExpressiveness,
+	GeistUIThemesLayout,
 } from '@geist-ui/core'
 
-const myFontTheme: GeistUIThemesFont = { }
+const myFontTheme: GeistUIThemesFont = {}
 ```
 
 </Attributes>

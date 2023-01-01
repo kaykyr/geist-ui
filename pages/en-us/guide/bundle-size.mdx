@@ -1,9 +1,9 @@
 import Layout from 'lib/components/layout'
 
 export const meta = {
-  title: 'Bundle Size',
-  group: 'Getting Started',
-  index: 11,
+	title: 'Bundle Size',
+	group: 'Getting Started',
+	index: 11,
 }
 
 ## Bundle Size
@@ -21,15 +21,15 @@ As long as you use the ES module to import Geist, you can automatically remove u
 
 Generally this means that the scaffolding you are using needs to be larger than the following versions
 
-- Webpack: `>= 5.0`
-- Next.js: `>= 11.0`
-- React scripts (CRA): `>= 5.0`
+-   Webpack: `>= 5.0`
+-   Next.js: `>= 11.0`
+-   React scripts (CRA): `>= 5.0`
 
 #### Recommended Examples
 
-- [CRA with TreeShaking](https://github.com/geist-org/geist-ui/blob/master/examples/tree-shaking-create-react-app/README.md)
-- [Next.js with TreeShaking](https://github.com/geist-org/geist-ui/blob/master/examples/tree-shaking-nextjs/README.md)
-- [Webpack with TreeShaking](https://github.com/geist-org/geist-ui/blob/master/examples/tree-shaking-webpack/README.md)
+-   [CRA with TreeShaking](https://github.com/geist-org/geist-ui/blob/master/examples/tree-shaking-create-react-app/README.md)
+-   [Next.js with TreeShaking](https://github.com/geist-org/geist-ui/blob/master/examples/tree-shaking-nextjs/README.md)
+-   [Webpack with TreeShaking](https://github.com/geist-org/geist-ui/blob/master/examples/tree-shaking-webpack/README.md)
 
 ### Import single component manually
 
@@ -59,22 +59,22 @@ A classic use case is to add the following config to the `.babelrc`:
 ```json
 // NAME:.babelrc
 {
-  "plugins": [
-    [
-      "import",
-      {
-        "libraryName": "@geist-ui/core",
-        "libraryDirectory": "esm"
-      }
-    ]
-  ]
+	"plugins": [
+		[
+			"import",
+			{
+				"libraryName": "@geist-ui/core",
+				"libraryDirectory": "esm"
+			}
+		]
+	]
 }
 ```
 
 #### Legacy Examples
 
-- [CRA with Babel](https://github.com/geist-org/geist-ui/blob/v2.3.3/examples/tree-shaking-create-react-app/README.md)
-- [Next.js with Babel](https://github.com/geist-org/geist-ui/blob/v2.3.3/examples/tree-shaking-nextjs/README.md)
-- [Webpack with Babel](https://github.com/geist-org/geist-ui/blob/v2.3.3/examples/tree-shaking-webpack/README.md)
+-   [CRA with Babel](https://github.com/geist-org/geist-ui/blob/v2.3.3/examples/tree-shaking-create-react-app/README.md)
+-   [Next.js with Babel](https://github.com/geist-org/geist-ui/blob/v2.3.3/examples/tree-shaking-nextjs/README.md)
+-   [Webpack with Babel](https://github.com/geist-org/geist-ui/blob/v2.3.3/examples/tree-shaking-webpack/README.md)
 
 export default ({ children }) => <Layout meta={meta}>{children}</Layout>

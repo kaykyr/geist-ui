@@ -2,8 +2,8 @@ import { Layout, Playground, Attributes } from 'lib/components'
 import { Toggle, Spacer } from 'components'
 
 export const meta = {
-  title: 'Toggle',
-  group: 'Data Entry',
+	title: 'Toggle',
+	group: 'Data Entry',
 }
 
 ## Toggle
@@ -11,8 +11,8 @@ export const meta = {
 Displays a boolean value.
 
 <Playground
-  scope={{ Toggle, Spacer }}
-  code={`
+	scope={{ Toggle, Spacer }}
+	code={`
 <>
   <Toggle />
   <Spacer h={.5} />
@@ -22,10 +22,10 @@ Displays a boolean value.
 />
 
 <Playground
-  title="Type"
-  desc="Differentiate states by color."
-  scope={{ Toggle, Spacer }}
-  code={`
+	title="Type"
+	desc="Differentiate states by color."
+	scope={{ Toggle, Spacer }}
+	code={`
 <>
   <Toggle type="default" initialChecked />
   <Spacer h={.5} />
@@ -41,9 +41,9 @@ Displays a boolean value.
 />
 
 <Playground
-  title="disabled"
-  scope={{ Toggle, Spacer }}
-  code={`
+	title="disabled"
+	scope={{ Toggle, Spacer }}
+	code={`
 <>
   <Toggle disabled />
   <Spacer h={.5} />
@@ -53,9 +53,9 @@ Displays a boolean value.
 />
 
 <Playground
-  title="get change"
-  scope={{ Toggle, Spacer }}
-  code={`
+	title="get change"
+	scope={{ Toggle, Spacer }}
+	code={`
 () => {
   const handler = event => {
     console.log(event.target.checked)
@@ -81,14 +81,14 @@ Displays a boolean value.
 
 ```ts
 interface ToggleEventTarget {
-  checked: boolean
+	checked: boolean
 }
 
 export interface ToggleEvent {
-  target: ToggleEventTarget
-  stopPropagation: () => void
-  preventDefault: () => void
-  nativeEvent: React.ChangeEvent
+	target: ToggleEventTarget
+	stopPropagation: () => void
+	preventDefault: () => void
+	nativeEvent: React.ChangeEvent
 }
 ```
 

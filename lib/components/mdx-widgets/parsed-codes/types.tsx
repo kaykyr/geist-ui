@@ -12,5 +12,5 @@ const __html = `
 <span class="token punctuation">}</span>
 `.trim()
 export const Types: React.FC<unknown> = () => (
-  <code className="language-jsx" dangerouslySetInnerHTML={{ __html }} />
+	<code className="language-jsx" dangerouslySetInnerHTML={{ __html }} />
 )

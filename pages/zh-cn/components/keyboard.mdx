@@ -2,8 +2,8 @@ import { Layout, Playground, Attributes } from 'lib/components'
 import { Keyboard } from 'components'
 
 export const meta = {
-  title: '键盘 keyboard',
-  group: '数据展示',
+	title: '键盘 keyboard',
+	group: '数据展示',
 }
 
 ## Keyboard / 键盘
@@ -13,16 +13,16 @@ export const meta = {
 组件 `Keyboard` 只用于展示布局样式，如需绑定按键事件，请阅读 [useKeyboard](/zh-cn/hooks/use-keyboard)。
 
 <Playground
-  scope={{ Keyboard }}
-  code={`
+	scope={{ Keyboard }}
+	code={`
 <Keyboard>f</Keyboard>
 `}
 />
 
 <Playground
-  title="修饰符"
-  scope={{ Keyboard }}
-  code={`
+	title="修饰符"
+	scope={{ Keyboard }}
+	code={`
 <div>
   <Keyboard command mr="10px" />
   <Keyboard shift mr="10px" />
@@ -33,9 +33,9 @@ export const meta = {
 />
 
 <Playground
-  title="组合键"
-  scope={{ Keyboard }}
-  code={`
+	title="组合键"
+	scope={{ Keyboard }}
+	code={`
 <div>
   <Keyboard command mr="10px">f</Keyboard>
   <Keyboard shift mr="10px">e</Keyboard>

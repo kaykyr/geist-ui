@@ -1,9 +1,9 @@
 import Layout from 'lib/components/layout'
 
 export const meta = {
-  title: 'Themes',
-  group: 'Customization',
-  index: 25,
+	title: 'Themes',
+	group: 'Customization',
+	index: 25,
 }
 
 ## Themes
@@ -24,16 +24,16 @@ To switch in the default themes you only need to set the value of `themeType`, y
 import { CssBaseline, GeistProvider } from '@geist-ui/core'
 
 const App = () => {
-  const [themeType, setThemeType] = useState('light')
-  const switchThemes = () => {
-    setThemeType(last => (last === 'dark' ? 'light' : 'dark'))
-  }
-  return (
-    <GeistProvider themeType={themeType}>
-      <CssBaseline />
-      <YourComponent onClick={switchThemes} />
-    </GeistProvider>
-  )
+	const [themeType, setThemeType] = useState('light')
+	const switchThemes = () => {
+		setThemeType((last) => (last === 'dark' ? 'light' : 'dark'))
+	}
+	return (
+		<GeistProvider themeType={themeType}>
+			<CssBaseline />
+			<YourComponent onClick={switchThemes} />
+		</GeistProvider>
+	)
 }
 ```
 
@@ -47,17 +47,17 @@ Here is a complete [sample](https://github.com/geist-org/geist-ui/tree/master/ex
 import { CssBaseline, GeistProvider, Themes } from '@geist-ui/core'
 
 const myTheme1 = Themes.createFromLight({
-  type: 'coolTheme',
-  palette: {
-    success: '#000',
-  },
+	type: 'coolTheme',
+	palette: {
+		success: '#000',
+	},
 })
 
 const App = () => (
-  <GeistProvider themes={[myTheme1]} themeType="coolTheme">
-    <CssBaseline />
-    <YourAppComponent onClick={switchThemes} />
-  </GeistProvider>
+	<GeistProvider themes={[myTheme1]} themeType="coolTheme">
+		<CssBaseline />
+		<YourAppComponent onClick={switchThemes} />
+	</GeistProvider>
 )
 ```
 
@@ -83,19 +83,19 @@ which corresponds to project that support TypeScript, you can refer to the type 
 
 ```ts
 import {
-  GeistUIThemes,
-  GeistUIThemesFont,
-  GeistUIThemesPalette,
-  GeistUIThemesExpressiveness,
-  GeistUIThemesLayout,
+	GeistUIThemes,
+	GeistUIThemesFont,
+	GeistUIThemesPalette,
+	GeistUIThemesExpressiveness,
+	GeistUIThemesLayout,
 } from '@geist-ui/core'
 
 // usage:
 const myStyles: GeistUIThemes = {
-  /* ... */
+	/* ... */
 }
 const myPalette: Partial<GeistUIThemesPalette> = {
-  /* ... */
+	/* ... */
 }
 ```
 
@@ -126,9 +126,9 @@ Defining an inline style will also correctly override the component.
 
 ```jsx
 const MyPage = () => (
-  <Row>
-    <Button style={{ margin: '20px' }}>Click me!</Button>
-  </Row>
+	<Row>
+		<Button style={{ margin: '20px' }}>Click me!</Button>
+	</Row>
 )
 ```
 
@@ -141,12 +141,12 @@ For more information, please refer to [useTheme](/en-us/hooks/use-theme) documen
 import { useTheme } from '@geist-ui/core'
 
 const MyComponent = () => {
-  const theme = useTheme()
-  return (
-    <div style={{ color: theme.palette.success }}>
-      <span>hello world!</span>
-    </div>
-  )
+	const theme = useTheme()
+	return (
+		<div style={{ color: theme.palette.success }}>
+			<span>hello world!</span>
+		</div>
+	)
 }
 ```
 
@@ -154,13 +154,13 @@ const MyComponent = () => {
 
 `Themes` contains some static methods that are useful when working with custom themes:
 
-- `Themes.create` - create a new theme object.
-- `Themes.createFromDark` - create a new theme object based on Dark Theme.
-- `Themes.createFromLight` - create a new theme object based on Light Theme.
-- `Themes.isPresetTheme` - Check if a theme is the base of Geist UI.
-- `Themes.isAvailableThemeType` - Check if the name of the theme is available.
-- `Themes.hasUserCustomTheme` - Check if a list of themes has a custom.
-- `Themes.getPresets` - Get a default list of themes.
-- `Themes.getPresetStaticTheme` - Get the theme loaded by Geist UI default.
+-   `Themes.create` - create a new theme object.
+-   `Themes.createFromDark` - create a new theme object based on Dark Theme.
+-   `Themes.createFromLight` - create a new theme object based on Light Theme.
+-   `Themes.isPresetTheme` - Check if a theme is the base of Geist UI.
+-   `Themes.isAvailableThemeType` - Check if the name of the theme is available.
+-   `Themes.hasUserCustomTheme` - Check if a list of themes has a custom.
+-   `Themes.getPresets` - Get a default list of themes.
+-   `Themes.getPresetStaticTheme` - Get the theme loaded by Geist UI default.
 
 export default ({ children }) => <Layout meta={meta}>{children}</Layout>

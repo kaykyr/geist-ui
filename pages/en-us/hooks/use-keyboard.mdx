@@ -2,9 +2,9 @@ import { Layout, Playground, Attributes } from 'lib/components'
 import { useKeyboard, KeyCode, KeyMod, Keyboard, Input, Link } from 'components'
 
 export const meta = {
-  title: 'useKeyboard',
-  group: 'Enhancement',
-  index: 5,
+	title: 'useKeyboard',
+	group: 'Enhancement',
+	index: 5,
 }
 
 ## useKeyboard
@@ -12,9 +12,9 @@ export const meta = {
 React hooks for listen to multiple keyboard events.
 
 <Playground
-  desc="Global keyboard events."
-  scope={{ useKeyboard, KeyCode, KeyMod, Keyboard }}
-  code={`
+	desc="Global keyboard events."
+	scope={{ useKeyboard, KeyCode, KeyMod, Keyboard }}
+	code={`
 () => {
   useKeyboard(
     () => alert('save success!'),
@@ -26,10 +26,10 @@ React hooks for listen to multiple keyboard events.
 />
 
 <Playground
-  title="Element Event"
-  desc="keyboard events listening on elements."
-  scope={{ useKeyboard, KeyCode, KeyMod, Keyboard, Input }}
-  code={`
+	title="Element Event"
+	desc="keyboard events listening on elements."
+	scope={{ useKeyboard, KeyCode, KeyMod, Keyboard, Input }}
+	code={`
 () => {
   const { bindings } = useKeyboard(
     () => alert('A is not allowed'),

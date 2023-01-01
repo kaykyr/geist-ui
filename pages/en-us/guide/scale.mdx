@@ -2,16 +2,16 @@ import { Layout, Attributes, GridDemo } from 'lib/components'
 import { Note, Display, Button } from 'components'
 
 export const meta = {
-  title: 'Scale',
-  group: 'Customization',
-  index: 30,
+	title: 'Scale',
+	group: 'Customization',
+	index: 30,
 }
 
 ## Scale
 
 <Note type="warning">
-  This feature was introduced in v2.2.0 and up. If you’re using older versions of Geist,
-  please upgrade before trying it out.
+	This feature was introduced in v2.2.0 and up. If you’re using older versions
+	of Geist, please upgrade before trying it out.
 </Note>
 
 The scalable nature of the Geist gives great flexibility to each component.
@@ -56,7 +56,7 @@ You can define each scalable property individually, a scale number or CSS string
 
 ```jsx
 <Button width="300px" font={1.5}>
-  Full Button
+	Full Button
 </Button>
 ```
 
@@ -82,16 +82,16 @@ For defining _scaling unit_ for multiple components at the same time, you need t
 // NAME: src/app.jsx
 const themeType = 'myTheme'
 const customUnitTheme = Themes.createFromLight({
-  type: themeType,
-  layout: {
-    unit: '20px',
-  },
+	type: themeType,
+	layout: {
+		unit: '20px',
+	},
 })
 const App = () => (
-  <GeistProvider themes={[customUnitTheme]} themeType={themeType}>
-    <Button />
-    <Input />
-  </GeistProvider>
+	<GeistProvider themes={[customUnitTheme]} themeType={themeType}>
+		<Button />
+		<Input />
+	</GeistProvider>
 )
 ```
 
@@ -115,19 +115,19 @@ Below is a reference to all available props and aliases，
 | **height / h**          | component height           | string, number | 'auto'  |
 | **font**                | font size                  | string, number | -       |
 | **margin**              | all margin size            | string, number | `0`     |
-| **marginLeft / ml**     |                            | string, number  | -       |
-| **marginRight / mr**    |                            | string, number  | -       |
-| **marginTop / mt**      |                            | string, number  | -       |
-| **marginBottom / mb**   |                            | string, number  | -       |
-| **padding**             | all padding size           | string, number  | `0`     |
-| **paddingLeft / pl**    |                            | string, number  | -       |
-| **paddingRight / pr**   |                            | string, number  | -       |
-| **paddingTop / pt**     |                            | string, number  | -       |
-| **paddingBottom / pb**  |                            | string, number  | -       |
-| **mx**&nbsp;(`ml & mr`) | horizontal axis of margin  | string, number  | -       |
-| **my**&nbsp;(`mt & mb`) | vertical axis of margin    | string, number  | -       |
-| **px**&nbsp;(`pl & pr`) | horizontal axis of padding | string, number  | -       |
-| **py**&nbsp;(`pt & pb`) | vertical axis of padding   | string, number  | -       |
+| **marginLeft / ml**     |                            | string, number | -       |
+| **marginRight / mr**    |                            | string, number | -       |
+| **marginTop / mt**      |                            | string, number | -       |
+| **marginBottom / mb**   |                            | string, number | -       |
+| **padding**             | all padding size           | string, number | `0`     |
+| **paddingLeft / pl**    |                            | string, number | -       |
+| **paddingRight / pr**   |                            | string, number | -       |
+| **paddingTop / pt**     |                            | string, number | -       |
+| **paddingBottom / pb**  |                            | string, number | -       |
+| **mx**&nbsp;(`ml & mr`) | horizontal axis of margin  | string, number | -       |
+| **my**&nbsp;(`mt & mb`) | vertical axis of margin    | string, number | -       |
+| **px**&nbsp;(`pl & pr`) | horizontal axis of padding | string, number | -       |
+| **py**&nbsp;(`pt & pb`) | vertical axis of padding   | string, number | -       |
 
 </Attributes.Table>
 

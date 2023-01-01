@@ -2,9 +2,9 @@ import { Layout, Playground, Attributes } from 'lib/components'
 import { useCurrentState, Link, Button, Spacer } from 'components'
 
 export const meta = {
-  title: '当前值 useCurrentState',
-  group: '开发者',
-  index: 101,
+	title: '当前值 useCurrentState',
+	group: '开发者',
+	index: 101,
 }
 
 ## useCurrentState / 获取当前值
@@ -17,8 +17,8 @@ export const meta = {
 这是一个自定义的 React Hooks，你需要在使用时遵循 <Link target="_blank" color href="https://reactjs.org/docs/hooks-rules.html">钩子的基础规则</Link>。
 
 <Playground
-  scope={{ useCurrentState, Button }}
-  code={`
+	scope={{ useCurrentState, Button }}
+	code={`
 () => {
   const [value, setValue] = React.useState(0)
   const [value2, setValue2, value2Ref] = useCurrentState(0)

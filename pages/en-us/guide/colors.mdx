@@ -2,9 +2,9 @@ import { Code, Display } from 'components'
 import { Layout, Colors } from 'lib/components'
 
 export const meta = {
-  title: 'Colors',
-  group: 'Customization',
-  index: 20,
+	title: 'Colors',
+	group: 'Customization',
+	index: 20,
 }
 
 ## Colors
@@ -22,9 +22,9 @@ If you want to customize your colors, please read [use-theme](/en-us/hooks/use-t
 import { useTheme } from '@geist-ui/core'
 
 const myComponent = () => {
-  const { palette } = useTheme()
+	const { palette } = useTheme()
 
-  return <p style={{ color: palette.accents_1 }}>myComponent</p>
+	return <p style={{ color: palette.accents_1 }}>myComponent</p>
 }
 ```
 

@@ -1,9 +1,9 @@
 import Layout from 'lib/components/layout'
 
 export const meta = {
-  title: '构建体积',
-  group: '快速上手',
-  index: 11,
+	title: '构建体积',
+	group: '快速上手',
+	index: 11,
 }
 
 ## 构建体积
@@ -20,15 +20,15 @@ export const meta = {
 
 通常这意味着你的脚手架需要高于以下版本：
 
-- Webpack: `>= 5.0`
-- Next.js: `>= 11.0`
-- React scripts (CRA): `>= 5.0`
+-   Webpack: `>= 5.0`
+-   Next.js: `>= 11.0`
+-   React scripts (CRA): `>= 5.0`
 
 #### 推荐的示例
 
-- [CRA with TreeShaking](https://github.com/geist-org/geist-ui/blob/master/examples/tree-shaking-create-react-app/README.md)
-- [Next.js with TreeShaking](https://github.com/geist-org/geist-ui/blob/master/examples/tree-shaking-nextjs/README.md)
-- [Webpack with TreeShaking](https://github.com/geist-org/geist-ui/blob/master/examples/tree-shaking-webpack/README.md)
+-   [CRA with TreeShaking](https://github.com/geist-org/geist-ui/blob/master/examples/tree-shaking-create-react-app/README.md)
+-   [Next.js with TreeShaking](https://github.com/geist-org/geist-ui/blob/master/examples/tree-shaking-nextjs/README.md)
+-   [Webpack with TreeShaking](https://github.com/geist-org/geist-ui/blob/master/examples/tree-shaking-webpack/README.md)
 
 ### 手动引入单个组件
 
@@ -55,22 +55,22 @@ Geist 遵循自动 Tree Shaking 的命名方案 (社区约定)，这允许你全
 ```json
 // NAME:.babelrc
 {
-  "plugins": [
-    [
-      "import",
-      {
-        "libraryName": "@geist-ui/core",
-        "libraryDirectory": "esm"
-      }
-    ]
-  ]
+	"plugins": [
+		[
+			"import",
+			{
+				"libraryName": "@geist-ui/core",
+				"libraryDirectory": "esm"
+			}
+		]
+	]
 }
 ```
 
 #### 旧版本可用参考
 
-- [CRA with Babel](https://github.com/geist-org/geist-ui/blob/v2.3.3/examples/tree-shaking-create-react-app/README.md)
-- [Next.js with Babel](https://github.com/geist-org/geist-ui/blob/v2.3.3/examples/tree-shaking-nextjs/README.md)
-- [Webpack with Babel](https://github.com/geist-org/geist-ui/blob/v2.3.3/examples/tree-shaking-webpack/README.md)
+-   [CRA with Babel](https://github.com/geist-org/geist-ui/blob/v2.3.3/examples/tree-shaking-create-react-app/README.md)
+-   [Next.js with Babel](https://github.com/geist-org/geist-ui/blob/v2.3.3/examples/tree-shaking-nextjs/README.md)
+-   [Webpack with Babel](https://github.com/geist-org/geist-ui/blob/v2.3.3/examples/tree-shaking-webpack/README.md)
 
 export default ({ children }) => <Layout meta={meta}>{children}</Layout>

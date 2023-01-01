@@ -3,8 +3,8 @@ import { Link, Text, Code, Spacer } from 'components'
 import NextLink from 'next/link'
 
 export const meta = {
-  title: 'Link',
-  group: 'Navigation',
+	title: 'Link',
+	group: 'Navigation',
 }
 
 ## Link
@@ -12,26 +12,26 @@ export const meta = {
 Hyperlinks between pages.
 
 <Playground
-  scope={{ Link }}
-  code={`
+	scope={{ Link }}
+	code={`
 <Link href="#">HTTP is stateless, but not sessionless.</Link>
 `}
 />
 
 <Playground
-  title="highlight"
-  desc="Distinguish links with different colors."
-  scope={{ Link }}
-  code={`
+	title="highlight"
+	desc="Distinguish links with different colors."
+	scope={{ Link }}
+	code={`
 <Link href="#" color>HTTP is stateless, but not sessionless.</Link>
 `}
 />
 
 <Playground
-  title="With Icon"
-  desc="Show an icon in the link."
-  scope={{ Link, Spacer }}
-  code={`
+	title="With Icon"
+	desc="Show an icon in the link."
+	scope={{ Link, Spacer }}
+	code={`
 <>
   <Link href="#" icon>HTTP is stateless, but not sessionless.</Link>
   <Spacer h={.5} />
@@ -41,10 +41,10 @@ Hyperlinks between pages.
 />
 
 <Playground
-  title="variant"
-  desc="Different styles of links."
-  scope={{ Link, Text }}
-  code={`
+	title="variant"
+	desc="Different styles of links."
+	scope={{ Link, Text }}
+	code={`
 <>
   <Text><Link href="#">HTTP is stateless, but not sessionless.</Link></Text>
   <Text><Link href="#" color>HTTP is stateless, but not sessionless.</Link></Text>
@@ -55,23 +55,23 @@ Hyperlinks between pages.
 />
 
 <Playground
-  title="block"
-  desc="Display as a separate block."
-  scope={{ Link }}
-  code={`
+	title="block"
+	desc="Display as a separate block."
+	scope={{ Link }}
+	code={`
 <Link href="#" block>HTTP is stateless, but not sessionless.</Link>
 `}
 />
 
 <Playground
-  title={
-    <>
-      With <Code>next/link</Code>
-    </>
-  }
-  desc="Use `Link` with NextJS without any configuration."
-  scope={{ Link, NextLink }}
-  code={`
+	title={
+		<>
+			With <Code>next/link</Code>
+		</>
+	}
+	desc="Use `Link` with NextJS without any configuration."
+	scope={{ Link, NextLink }}
+	code={`
 <NextLink href="/en-us/components/button">
   <Link block>Docs of Button</Link>
 </NextLink>

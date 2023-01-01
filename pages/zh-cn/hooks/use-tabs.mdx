@@ -2,9 +2,9 @@ import { Layout, Playground, Attributes } from 'lib/components'
 import { useTabs, Tabs, Button, Spacer } from 'components'
 
 export const meta = {
-  title: '选项卡绑定 useTabs',
-  group: '组件增强',
-  index: 11,
+	title: '选项卡绑定 useTabs',
+	group: '组件增强',
+	index: 11,
 }
 
 ## useTabs / 选项卡绑定
@@ -13,9 +13,9 @@ export const meta = {
 使用此 Hooks 与你手动添加 `React.useState` 以绑定组件的行为完全一致。
 
 <Playground
-  desc="使用 Hooks 控制组件与捕获变化。"
-  scope={{ Tabs, Button, Spacer, useTabs }}
-  code={`
+	desc="使用 Hooks 控制组件与捕获变化。"
+	scope={{ Tabs, Button, Spacer, useTabs }}
+	code={`
 () => {
   const { setState, bindings } = useTabs('1')
   return (
@@ -39,13 +39,13 @@ export const meta = {
 
 ```ts
 type useTabs = (initialValue: string) => {
-  state: string
-  setState: Dispatch<SetStateAction<string>>
-  currentRef: MutableRefObject<string>
-  bindings: {
-    value: string
-    onChange: (val: string) => void
-  }
+	state: string
+	setState: Dispatch<SetStateAction<string>>
+	currentRef: MutableRefObject<string>
+	bindings: {
+		value: string
+		onChange: (val: string) => void
+	}
 }
 ```
 

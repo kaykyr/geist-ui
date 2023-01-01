@@ -5,8 +5,8 @@ import UserX from '@geist-ui/icons/userX'
 import Power from '@geist-ui/icons/power'
 
 export const meta = {
-  title: '按钮 Button',
-  group: '通用',
+	title: '按钮 Button',
+	group: '通用',
 }
 
 ## Button / 按钮
@@ -14,18 +14,18 @@ export const meta = {
 用于触发一个操作。
 
 <Playground
-  desc="基础的 `Button` 包含一个动画效果。"
-  scope={{ Button }}
-  code={`
+	desc="基础的 `Button` 包含一个动画效果。"
+	scope={{ Button }}
+	code={`
 <Button>动作</Button>
 `}
 />
 
 <Playground
-  title="加载中"
-  desc="表示正在运行或加载中的状态。"
-  scope={{ Button, Spacer }}
-  code={`
+	title="加载中"
+	desc="表示正在运行或加载中的状态。"
+	scope={{ Button, Spacer }}
+	code={`
 <>
   <Button loading>Action</Button>
   <Spacer h={.5} />
@@ -37,28 +37,28 @@ export const meta = {
 />
 
 <Playground
-  title="禁用的"
-  desc="不对任何操作进行响应。"
-  scope={{ Button }}
-  code={`
+	title="禁用的"
+	desc="不对任何操作进行响应。"
+	scope={{ Button }}
+	code={`
 <Button disabled>点击</Button>
 `}
 />
 
 <Playground
-  title="阴影"
-  desc="使用阴影突出显示更高层级的按钮。"
-  scope={{ Button }}
-  code={`
+	title="阴影"
+	desc="使用阴影突出显示更高层级的按钮。"
+	scope={{ Button }}
+	code={`
 <Button shadow type="secondary">阴影</Button>
 `}
 />
 
 <Playground
-  title="类型"
-  desc="不同状态下的按钮。"
-  scope={{ Button, Grid }}
-  code={`
+	title="类型"
+	desc="不同状态下的按钮。"
+	scope={{ Button, Grid }}
+	code={`
 <Grid.Container gap={2}>
   <Grid><Button auto type="secondary">次要的</Button></Grid>
   <Grid><Button auto type="success">成功</Button></Grid>
@@ -74,10 +74,10 @@ export const meta = {
 />
 
 <Playground
-  title="反色"
-  desc="底色与主色相反的透明按钮。"
-  scope={{ Button, Grid }}
-  code={`
+	title="反色"
+	desc="底色与主色相反的透明按钮。"
+	scope={{ Button, Grid }}
+	code={`
 <Grid.Container gap={1.5}>
   <Grid><Button type="secondary" ghost auto scale={0.7}>Secondary</Button></Grid>
   <Grid><Button type="success" ghost auto scale={0.7}>Success</Button></Grid>
@@ -88,10 +88,10 @@ export const meta = {
 />
 
 <Playground
-  title="伸缩性"
-  desc="不同大小的按钮组件。"
-  scope={{ Button, Grid }}
-  code={`
+	title="伸缩性"
+	desc="不同大小的按钮组件。"
+	scope={{ Button, Grid }}
+	code={`
 <Grid.Container gap={1.5}>
   <Grid><Button auto scale={0.25}>0.25</Button></Grid>
   <Grid><Button auto scale={0.35}>0.35</Button></Grid>
@@ -111,10 +111,10 @@ export const meta = {
 />
 
 <Playground
-  title="图标"
-  desc="按钮内的图标色彩和大小将会被自动设置。"
-  scope={{ Button, Spacer, Settings, UserX, Power }}
-  code={`
+	title="图标"
+	desc="按钮内的图标色彩和大小将会被自动设置。"
+	scope={{ Button, Spacer, Settings, UserX, Power }}
+	code={`
 <>
   <Button iconRight={<Power />} auto scale={2/3} />
   <Spacer w={.5} inline />
@@ -156,16 +156,16 @@ export const meta = {
 
 ```ts
 type ButtonTypes =
-  | 'default'
-  | 'secondary'
-  | 'success'
-  | 'warning'
-  | 'error'
-  | 'abort'
-  | 'secondary-light'
-  | 'success-light'
-  | 'warning-light'
-  | 'error-light'
+	| 'default'
+	| 'secondary'
+	| 'success'
+	| 'warning'
+	| 'error'
+	| 'abort'
+	| 'secondary-light'
+	| 'success-light'
+	| 'warning-light'
+	| 'error-light'
 ```
 
 </Attributes>

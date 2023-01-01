@@ -2,9 +2,9 @@ import { Layout, Playground, Attributes } from 'lib/components'
 import { useToasts, Button, Spacer, Link } from 'components'
 
 export const meta = {
-  title: 'useToast',
-  group: 'Enhancement',
-  index: 12,
+	title: 'useToast',
+	group: 'Enhancement',
+	index: 12,
 }
 
 ## useToast
@@ -12,9 +12,9 @@ export const meta = {
 Display an important message globally.
 
 <Playground
-  desc="Basic usage."
-  scope={{ Button, useToasts }}
-  code={`
+	desc="Basic usage."
+	scope={{ Button, useToasts }}
+	code={`
 () => {
   const { setToast } = useToasts()
   const click = () => setToast({ text: 'HTTP is stateless, but not sessionless.', delay: 2000 })
@@ -24,10 +24,10 @@ Display an important message globally.
 />
 
 <Playground
-  title="Multiline"
-  desc="Display multiline or overlong text."
-  scope={{ Button, useToasts }}
-  code={`
+	title="Multiline"
+	desc="Display multiline or overlong text."
+	scope={{ Button, useToasts }}
+	code={`
 () => {
   const { setToast } = useToasts()
   const click = () => setToast({ text: 'HTTP is a protocol which allows the fetching of resources, such as HTML documents. It is the foundation of any data exchange on the Web and it is a client-server protocol, which means requests are initiated by the recipient, usually the Web browser. A complete document is reconstructed from the different sub-documents fetched, for instance text, layout description, images, videos, scripts, and more.' })
@@ -37,10 +37,10 @@ Display an important message globally.
 />
 
 <Playground
-  title="Action"
-  desc="Add a custom button to the Toast."
-  scope={{ Button, useToasts }}
-  code={`
+	title="Action"
+	desc="Add a custom button to the Toast."
+	scope={{ Button, useToasts }}
+	code={`
 () => {
   const { setToast } = useToasts()
   const action = {
@@ -57,10 +57,10 @@ Display an important message globally.
 />
 
 <Playground
-  title="Cancel"
-  desc="Use `passive` to change the style of the button."
-  scope={{ Button, useToasts }}
-  code={`
+	title="Cancel"
+	desc="Use `passive` to change the style of the button."
+	scope={{ Button, useToasts }}
+	code={`
 () => {
   const { setToast } = useToasts()
   const action = {
@@ -78,10 +78,10 @@ Display an important message globally.
 />
 
 <Playground
-  title="ReactNode"
-  desc="Show more information by replacing the string with a `ReactNode`."
-  scope={{ Button, useToasts, Link }}
-  code={`
+	title="ReactNode"
+	desc="Show more information by replacing the string with a `ReactNode`."
+	scope={{ Button, useToasts, Link }}
+	code={`
 () => {
   const { setToast } = useToasts()
   const click = () => setToast({
@@ -94,9 +94,9 @@ Display an important message globally.
 />
 
 <Playground
-  title="Type"
-  scope={{ Button, useToasts, Spacer }}
-  code={`
+	title="Type"
+	scope={{ Button, useToasts, Spacer }}
+	code={`
 () => {
   const { setToast } = useToasts()
   const click = type => setToast({
@@ -167,9 +167,12 @@ type ToastPlacement = 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight'
 
 ```ts
 interface ToastAction {
-  name: string
-  handler: (event: React.MouseEventHandler<HTMLButtonElement>, cancel: Function) => void
-  passive?: boolean
+	name: string
+	handler: (
+		event: React.MouseEventHandler<HTMLButtonElement>,
+		cancel: Function,
+	) => void
+	passive?: boolean
 }
 ```
 

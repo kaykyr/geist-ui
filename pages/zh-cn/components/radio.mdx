@@ -3,8 +3,8 @@ import { Radio, Code, Text, Spacer } from 'components'
 import { useState } from 'react'
 
 export const meta = {
-  title: '单选框 Radio',
-  group: '数据录入',
+	title: '单选框 Radio',
+	group: '数据录入',
 }
 
 ## Radio / 单选框
@@ -12,17 +12,17 @@ export const meta = {
 提供用户输入的选择项。
 
 <Playground
-  scope={{ Radio }}
-  code={`
+	scope={{ Radio }}
+	code={`
 <Radio checked={false}>选项 1</Radio>
 `}
 />
 
 <Playground
-  title="组"
-  desc="一组可控选择的数值。"
-  scope={{ Radio, useState }}
-  code={`
+	title="组"
+	desc="一组可控选择的数值。"
+	scope={{ Radio, useState }}
+	code={`
 () => {
   const [state, setState] = useState('1')
   const handler = val => {
@@ -42,10 +42,10 @@ export const meta = {
 />
 
 <Playground
-  title="类型"
-  desc="以色彩展示不同状态。"
-  scope={{ Radio, Spacer }}
-  code={`
+	title="类型"
+	desc="以色彩展示不同状态。"
+	scope={{ Radio, Spacer }}
+	code={`
 <>
   <Radio checked={false} type="default">Default</Radio>
   <Spacer h={.5} />
@@ -59,10 +59,10 @@ export const meta = {
 />
 
 <Playground
-  title="描述"
-  desc="`Description` 属性可以与组件结合使用。"
-  scope={{ Radio, Text }}
-  code={`
+	title="描述"
+	desc="`Description` 属性可以与组件结合使用。"
+	scope={{ Radio, Text }}
+	code={`
 <Radio.Group value="1" onChange={val => console.log(val)}>
   <Radio value="1">
     No Store
@@ -77,10 +77,10 @@ export const meta = {
 />
 
 <Playground
-  title="禁用"
-  desc="禁用组内所有的可选项。"
-  scope={{ Radio, useState, Code }}
-  code={`
+	title="禁用"
+	desc="禁用组内所有的可选项。"
+	scope={{ Radio, useState, Code }}
+	code={`
 <Radio.Group value="1" disabled>
   <Radio value="1">郑州</Radio>
   <Radio value="2">南昌</Radio>
@@ -89,10 +89,10 @@ export const meta = {
 />
 
 <Playground
-  title="行"
-  desc="水平排列所有的选项。"
-  scope={{ Radio, Code }}
-  code={`
+	title="行"
+	desc="水平排列所有的选项。"
+	scope={{ Radio, Code }}
+	code={`
 <Radio.Group value="1" useRow>
   <Radio value="1">
     MSQRT

@@ -2,8 +2,8 @@ import { Code, Text } from 'components'
 import { Layout, Playground, Attributes, ParsedCodes } from 'lib/components'
 
 export const meta = {
-  title: 'Code',
-  group: 'General',
+	title: 'Code',
+	group: 'General',
 }
 
 ## Code
@@ -11,45 +11,45 @@ export const meta = {
 Show source code in a standardized way. Want to display shell code snippets? try [Snippet](/en-us/components/snippet).
 
 <Playground
-  desc="Basic inline codes."
-  scope={{ Code, Text }}
-  code={`
+	desc="Basic inline codes."
+	scope={{ Code, Text }}
+	code={`
 <Text my={0}>Run <Code>npm i @geist-ui/core</Code> to install.</Text>
 `}
 />
 
 <Playground
-  title="Code Block"
-  desc="Multi line code display."
-  scope={{ Code, ExampleCodes: ParsedCodes.Types }}
-  code={`
+	title="Code Block"
+	desc="Multi line code display."
+	scope={{ Code, ExampleCodes: ParsedCodes.Types }}
+	code={`
 <Code block my={0}><ExampleCodes /></Code>
 `}
 />
 
 <Playground
-  title="width"
-  desc="Specify width manually, or other styles."
-  scope={{ Code, ExampleCodes: ParsedCodes.Greeting }}
-  code={`
+	title="width"
+	desc="Specify width manually, or other styles."
+	scope={{ Code, ExampleCodes: ParsedCodes.Greeting }}
+	code={`
 <Code block width="50%" my={0}><ExampleCodes /></Code>
 `}
 />
 
 <Playground
-  title="name"
-  desc="Specify the file name for the code block."
-  scope={{ Code, ExampleCodes: ParsedCodes.Clock }}
-  code={`
+	title="name"
+	desc="Specify the file name for the code block."
+	scope={{ Code, ExampleCodes: ParsedCodes.Clock }}
+	code={`
 <Code block name="/Components/Clock.jsx" my={0}><ExampleCodes /></Code>
 `}
 />
 
 <Playground
-  title="classic style"
-  desc="The classic design style with a line border instead of a background."
-  scope={{ Code, ExampleCodes: ParsedCodes.Clock }}
-  code={`
+	title="classic style"
+	desc="The classic design style with a line border instead of a background."
+	scope={{ Code, ExampleCodes: ParsedCodes.Clock }}
+	code={`
 <Code block classic name="/Components/Clock.jsx" my={0}><ExampleCodes /></Code>
 `}
 />

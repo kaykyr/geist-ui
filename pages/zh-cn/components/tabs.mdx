@@ -5,8 +5,8 @@ import TwitterIcon from '@geist-ui/icons/twitter'
 import TwitchIcon from '@geist-ui/icons/twitch'
 
 export const meta = {
-  title: '选项卡 Tabs',
-  group: '导航',
+	title: '选项卡 Tabs',
+	group: '导航',
 }
 
 ## Tabs / 选项卡
@@ -16,9 +16,9 @@ export const meta = {
 选项卡组件包含额外的 Hooks，详情请参阅 [useTabs](/zh-cn/hooks/use-tabs) 小节。
 
 <Playground
-  scope={{ Tabs }}
-  desc="切换显示不同的内容。"
-  code={`
+	scope={{ Tabs }}
+	desc="切换显示不同的内容。"
+	code={`
 <Tabs initialValue="1">
   <Tabs.Item label="二进制" value="1">二进制表示为开头是0后接大写或小写的B（0b或者0B）。</Tabs.Item>
   <Tabs.Item label="八进制" value="2">八进制表示为开头是0后接大写或小写的O（0o或0O）。</Tabs.Item>
@@ -27,9 +27,9 @@ export const meta = {
 />
 
 <Playground
-  title="禁用"
-  scope={{ Tabs }}
-  code={`
+	title="禁用"
+	scope={{ Tabs }}
+	code={`
 <Tabs initialValue="1">
   <Tabs.Item label="二进制" value="1">二进制表示为开头是0后接大写或小写的B（0b或者0B）。</Tabs.Item>
   <Tabs.Item label="八进制" value="2" disabled />
@@ -38,9 +38,9 @@ export const meta = {
 />
 
 <Playground
-  title="隐藏分割线"
-  scope={{ Tabs, Text }}
-  code={`
+	title="隐藏分割线"
+	scope={{ Tabs, Text }}
+	code={`
 <Tabs initialValue="html" hideDivider>
   <Tabs.Item label="HTML" value="html">
     <Text mt={0}>HTML 是我们用来构造网站内容的不同部分并定义它们的意义或目的的语言。</Text>
@@ -53,9 +53,9 @@ export const meta = {
 />
 
 <Playground
-  title="隐藏边框"
-  scope={{ Tabs, Text }}
-  code={`
+	title="隐藏边框"
+	scope={{ Tabs, Text }}
+	code={`
 <Tabs initialValue="html" hideDivider hideBorder>
   <Tabs.Item label="HTML" value="html">
     <Text mt={0}>HTML 是我们用来构造网站内容的不同部分并定义它们的意义或目的的语言。</Text>
@@ -68,10 +68,10 @@ export const meta = {
 />
 
 <Playground
-  title="图标"
-  desc="在选项卡的标签上显示图标组件。"
-  scope={{ Tabs, TwitterIcon, TwitchIcon, Link, Text }}
-  code={`
+	title="图标"
+	desc="在选项卡的标签上显示图标组件。"
+	scope={{ Tabs, TwitterIcon, TwitchIcon, Link, Text }}
+	code={`
 <Tabs align="center" initialValue="1">
   <Tabs.Item label={<><TwitchIcon /> Twitch TV</>} value="1">
     <Text mt={0}>你好，这是我们在 Twitch 的最新直播。</Text>
@@ -84,10 +84,10 @@ export const meta = {
 />
 
 <Playground
-  title="命令式"
-  desc="以命令式的风格控制选项卡组件。"
-  scope={{ Tabs, Button, Spacer, useState }}
-  code={`
+	title="命令式"
+	desc="以命令式的风格控制选项卡组件。"
+	scope={{ Tabs, Button, Spacer, useState }}
+	code={`
 () => {
   const [value, setValue] = useState('1')
   const switchHandler = () => setValue('2')

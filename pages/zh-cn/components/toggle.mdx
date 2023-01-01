@@ -2,8 +2,8 @@ import { Layout, Playground, Attributes } from 'lib/components'
 import { Toggle, Spacer } from 'components'
 
 export const meta = {
-  title: '开关 Toggle',
-  group: '数据录入',
+	title: '开关 Toggle',
+	group: '数据录入',
 }
 
 ## Toggle / 开关
@@ -11,8 +11,8 @@ export const meta = {
 显示布尔值的状态。
 
 <Playground
-  scope={{ Toggle, Spacer }}
-  code={`
+	scope={{ Toggle, Spacer }}
+	code={`
 <>
   <Toggle />
   <Spacer h={.5} />
@@ -22,9 +22,9 @@ export const meta = {
 />
 
 <Playground
-  title="禁用"
-  scope={{ Toggle, Spacer }}
-  code={`
+	title="禁用"
+	scope={{ Toggle, Spacer }}
+	code={`
 <>
   <Toggle disabled />
   <Spacer h={.5} />
@@ -34,9 +34,9 @@ export const meta = {
 />
 
 <Playground
-  title="获取变化事件"
-  scope={{ Toggle, Spacer }}
-  code={`
+	title="获取变化事件"
+	scope={{ Toggle, Spacer }}
+	code={`
 () => {
   const handler = event => {
     console.log(event.target.checked)
@@ -61,14 +61,14 @@ export const meta = {
 
 ```ts
 interface ToggleEventTarget {
-  checked: boolean
+	checked: boolean
 }
 
 export interface ToggleEvent {
-  target: ToggleEventTarget
-  stopPropagation: () => void
-  preventDefault: () => void
-  nativeEvent: React.ChangeEvent
+	target: ToggleEventTarget
+	stopPropagation: () => void
+	preventDefault: () => void
+	nativeEvent: React.ChangeEvent
 }
 ```
 

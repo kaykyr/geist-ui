@@ -2,8 +2,8 @@ import { Page, Button } from 'components'
 import { Layout, Playground, Attributes, MockPage } from 'lib/components'
 
 export const meta = {
-  title: '页面 Page',
-  group: '布局',
+	title: '页面 Page',
+	group: '布局',
 }
 
 ## Page / 页面
@@ -11,9 +11,9 @@ export const meta = {
 展示页面内容的通用容器。
 
 <Playground
-  desc="内容将会被展示在页面中间。"
-  scope={{ Page, MockPage, Button }}
-  code={`
+	desc="内容将会被展示在页面中间。"
+	scope={{ Page, MockPage, Button }}
+	code={`
 () => {
   const Child = () => (
     <>
@@ -35,10 +35,10 @@ export const meta = {
 />
 
 <Playground
-  title="内容块"
-  desc="添加 `Header` 和 `Footer` 得到更好的布局效果。"
-  scope={{ Page, MockPage, Button }}
-  code={`
+	title="内容块"
+	desc="添加 `Header` 和 `Footer` 得到更好的布局效果。"
+	scope={{ Page, MockPage, Button }}
+	code={`
 () => {
   const [visible, setVisible] = React.useState(false)
   return (
@@ -71,8 +71,8 @@ export const meta = {
 | --------------- | -------------------- | --------------------------------- | --------------------------------------- | --------- |
 | **render**      | 渲染方式             | [PageRenderMode](#pagerendermode) | -                                       | `default` |
 | **dotBackdrop** | 在背景中显示装饰样式 | `boolean`                         | -                                       | `false`   |
-| **dotSize** | 背景中的点大小 | `CSSProperties`                         | -                        | `1px`   |
-| **dotSpace** | 背景中每个点的间距 | `number`                         | -                        | `1`   |
+| **dotSize**     | 背景中的点大小       | `CSSProperties`                   | -                                       | `1px`     |
+| **dotSpace**    | 背景中每个点的间距   | `number`                          | -                                       | `1`       |
 | ...             | 原生属性             | `HTMLAttributes`                  | `'autoFocus', 'name', 'className', ...` | -         |
 
 <Attributes.Title>Page.Header.Props</Attributes.Title>
@@ -98,9 +98,9 @@ export const meta = {
 
 ```ts
 type PageRenderMode =
-  | 'default' // 正常渲染
-  | 'effect' // 在 effect 第一次触发后渲染
-  | 'effect-seo' // 类似于 "effect"，但首屏为 SEO 额外返回字符串
+	| 'default' // 正常渲染
+	| 'effect' // 在 effect 第一次触发后渲染
+	| 'effect-seo' // 类似于 "effect"，但首屏为 SEO 额外返回字符串
 ```
 
 </Attributes>

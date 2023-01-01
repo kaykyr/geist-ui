@@ -4,8 +4,8 @@ import { Spacer, Tabs, Snippet } from 'components'
 import Github from '@geist-ui/icons/github'
 
 export const meta = {
-  title: '图标 Icons',
-  group: '通用',
+	title: '图标 Icons',
+	group: '通用',
 }
 
 ## Icons / 图标
@@ -14,14 +14,14 @@ export const meta = {
 
 <Title title="安装" desc="安装图标库到你的项目中。" />
 <Tabs initialValue="yarn">
-  <Tabs.Item label="Yarn" value="yarn">
-    <Spacer h={0.6} />
-    <Snippet width="400px">yarn add @geist-ui/icons</Snippet>
-  </Tabs.Item>
-  <Tabs.Item label="npm" value="npm">
-    <Spacer h={0.6} />
-    <Snippet width="400px">npm i @geist-ui/icons</Snippet>
-  </Tabs.Item>
+	<Tabs.Item label="Yarn" value="yarn">
+		<Spacer h={0.6} />
+		<Snippet width="400px">yarn add @geist-ui/icons</Snippet>
+	</Tabs.Item>
+	<Tabs.Item label="npm" value="npm">
+		<Spacer h={0.6} />
+		<Snippet width="400px">npm i @geist-ui/icons</Snippet>
+	</Tabs.Item>
 </Tabs>
 
 <Playground
@@ -38,17 +38,17 @@ export const meta = {
 `} />
 
 <Playground
-  title="色彩"
-  scope={{ Github }}
-  code={`
+	title="色彩"
+	scope={{ Github }}
+	code={`
 <Github color="red" />
 `}
 />
 
 <Playground
-  title="大小"
-  scope={{ Github, Spacer }}
-  code={`
+	title="大小"
+	scope={{ Github, Spacer }}
+	code={`
 <>
   <Github size={16} /> <Spacer inline x={.35} />
   <Github size={20} /> <Spacer inline x={.35} />

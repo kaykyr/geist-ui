@@ -2,9 +2,9 @@ import { Layout, Playground, Attributes } from 'lib/components'
 import { Text } from 'components'
 
 export const meta = {
-  title: 'Text',
-  group: 'General',
-  index: 10,
+	title: 'Text',
+	group: 'General',
+	index: 10,
 }
 
 ## Text
@@ -12,19 +12,19 @@ export const meta = {
 Display text using well-defined typographic styles.
 
 <Playground
-  title="Headings"
-  desc="Use `Text` to standardize text content."
-  scope={{ Text }}
-  code={`
+	title="Headings"
+	desc="Use `Text` to standardize text content."
+	scope={{ Text }}
+	code={`
 <Text h1>Start our Geist journey.</Text>
 `}
 />
 
 <Playground
-  title="Paragraph"
-  desc="Add `p` and `b` attributes to a `Text`."
-  scope={{ Text }}
-  code={`
+	title="Paragraph"
+	desc="Add `p` and `b` attributes to a `Text`."
+	scope={{ Text }}
+	code={`
 <>
   <Text p>
    Caching is very important for fast Web sites. This article describes different methods of caching and how to use HTTP Headers to control them.
@@ -37,9 +37,9 @@ Display text using well-defined typographic styles.
 />
 
 <Playground
-  title="Small"
-  scope={{ Text }}
-  code={`
+	title="Small"
+	scope={{ Text }}
+	code={`
 <>
   <Text small>
    HTTP response codes indicate whether a specific HTTP request has been successfully completed. Responses are grouped in five classes: informational responses, successful responses, redirections, client errors, and servers errors.
@@ -52,9 +52,9 @@ Display text using well-defined typographic styles.
 />
 
 <Playground
-  title="Blockquote"
-  scope={{ Text }}
-  code={`
+	title="Blockquote"
+	scope={{ Text }}
+	code={`
 <Text blockquote my={0}>
   Send cookies from the server to the user-agent.
 </Text>
@@ -62,9 +62,9 @@ Display text using well-defined typographic styles.
 />
 
 <Playground
-  title="Types"
-  scope={{ Text }}
-  code={`
+	title="Types"
+	scope={{ Text }}
+	code={`
 <Text b i style={{ letterSpacing: '0.6px' }}>
   <Text span type="success">G</Text>
   <Text span type="warning">e</Text>
@@ -77,9 +77,9 @@ Display text using well-defined typographic styles.
 />
 
 <Playground
-  title="Sizes"
-  scope={{ Text }}
-  code={`
+	title="Sizes"
+	scope={{ Text }}
+	code={`
 <>
   <Text font="12px" mt={0}>Font Size: 12px;</Text>
   <Text font="14px">Font Size: 14px;</Text>

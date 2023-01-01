@@ -3,8 +3,8 @@ import { Modal, Button, Code, useModal } from 'components'
 import { useState } from 'react'
 
 export const meta = {
-  title: 'Modal',
-  group: 'Feedback',
+	title: 'Modal',
+	group: 'Feedback',
 }
 
 ## Modal
@@ -15,10 +15,10 @@ If you just need to prompt for a text message, try component [Toast](/en-us/comp
 The Modal contain an additional Hooks, see subsection [useModal](/en-us/hooks/use-modal) for details.
 
 <Playground
-  title="Basic"
-  desc="Use `visible` control whether `Modal` is displayed."
-  scope={{ Modal, Button, useState }}
-  code={`
+	title="Basic"
+	desc="Use `visible` control whether `Modal` is displayed."
+	scope={{ Modal, Button, useState }}
+	code={`
 () => {
   const [state, setState] = useState(false)
   const handler = () => setState(true)
@@ -45,14 +45,14 @@ The Modal contain an additional Hooks, see subsection [useModal](/en-us/hooks/us
 />
 
 <Playground
-  title={
-    <>
-      With <Code>useModal</Code>
-    </>
-  }
-  desc="Use `hooks` for easier control `Modal`."
-  scope={{ Modal, Button, useModal }}
-  code={`
+	title={
+		<>
+			With <Code>useModal</Code>
+		</>
+	}
+	desc="Use `hooks` for easier control `Modal`."
+	scope={{ Modal, Button, useModal }}
+	code={`
 () => {
   const { visible, setVisible, bindings } = useModal()
   return (
@@ -74,10 +74,10 @@ The Modal contain an additional Hooks, see subsection [useModal](/en-us/hooks/us
 />
 
 <Playground
-  title="Without Actions"
-  desc="Hide all action buttons."
-  scope={{ Modal, Button, useState }}
-  code={`
+	title="Without Actions"
+	desc="Hide all action buttons."
+	scope={{ Modal, Button, useState }}
+	code={`
 () => {
   const [state, setState] = useState(false)
   const handler = () => setState(true)
@@ -102,10 +102,10 @@ The Modal contain an additional Hooks, see subsection [useModal](/en-us/hooks/us
 />
 
 <Playground
-  title="Disable Action"
-  desc="Disable one of the buttons."
-  scope={{ Modal, Button, useState }}
-  code={`
+	title="Disable Action"
+	desc="Disable one of the buttons."
+	scope={{ Modal, Button, useState }}
+	code={`
 () => {
   const [state, setState] = useState(false)
   const handler = () => setState(true)
@@ -132,10 +132,10 @@ The Modal contain an additional Hooks, see subsection [useModal](/en-us/hooks/us
 />
 
 <Playground
-  title="Customizable"
-  desc="Custom `width` or `className`."
-  scope={{ Modal, Button, useModal }}
-  code={`
+	title="Customizable"
+	desc="Custom `width` or `className`."
+	scope={{ Modal, Button, useModal }}
+	code={`
 () => {
   const { setVisible, bindings } = useModal()
   return (
@@ -154,9 +154,9 @@ The Modal contain an additional Hooks, see subsection [useModal](/en-us/hooks/us
 />
 
 <Playground
-  title="Loading"
-  scope={{ Modal, Button, useModal }}
-  code={`
+	title="Loading"
+	scope={{ Modal, Button, useModal }}
+	code={`
 () => {
   const { visible, setVisible, bindings } = useModal()
   return (
@@ -178,10 +178,10 @@ The Modal contain an additional Hooks, see subsection [useModal](/en-us/hooks/us
 />
 
 <Playground
-  title="Overlong"
-  desc="Whether it is desktop or mobile, the content beyond the scope has been well handled."
-  scope={{ Modal, Button, useModal }}
-  code={`
+	title="Overlong"
+	desc="Whether it is desktop or mobile, the content beyond the scope has been well handled."
+	scope={{ Modal, Button, useModal }}
+	code={`
 () => {
   const { visible, setVisible, bindings } = useModal()
   return (
@@ -267,13 +267,13 @@ The Modal contain an additional Hooks, see subsection [useModal](/en-us/hooks/us
 
 ```ts
 type useModal = (initialVisible: boolean) => {
-  visible: boolean
-  setVisible: Dispatch<SetStateAction<boolean>>
-  currentRef: MutableRefObject<boolean>
-  bindings: {
-    visible: boolean
-    onClose: () => void
-  }
+	visible: boolean
+	setVisible: Dispatch<SetStateAction<boolean>>
+	currentRef: MutableRefObject<boolean>
+	bindings: {
+		visible: boolean
+		onClose: () => void
+	}
 }
 ```
 
@@ -281,7 +281,7 @@ type useModal = (initialVisible: boolean) => {
 
 ```ts
 type ModalActionEvent = MouseEvent<HTMLButtonElement> & {
-  close: () => void
+	close: () => void
 }
 ```
 

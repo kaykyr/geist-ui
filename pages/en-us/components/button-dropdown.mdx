@@ -3,9 +3,9 @@ import { Playground, Attributes, Layout } from 'lib/components'
 import Plus from '@geist-ui/icons/plus'
 
 export const meta = {
-  title: 'Button Dropdown',
-  group: 'Navigation',
-  index: 101,
+	title: 'Button Dropdown',
+	group: 'Navigation',
+	index: 101,
 }
 
 ## Button Dropdown
@@ -13,9 +13,9 @@ export const meta = {
 Display related but alternate actions for a button.
 
 <Playground
-  title="Basic"
-  scope={{ ButtonDropdown }}
-  code={`
+	title="Basic"
+	scope={{ ButtonDropdown }}
+	code={`
 <ButtonDropdown>
   <ButtonDropdown.Item main>Default Action</ButtonDropdown.Item>
   <ButtonDropdown.Item>Secondary Action</ButtonDropdown.Item>
@@ -25,10 +25,10 @@ Display related but alternate actions for a button.
 />
 
 <Playground
-  title="Disabled"
-  desc="Disable all buttons."
-  scope={{ ButtonDropdown }}
-  code={`
+	title="Disabled"
+	desc="Disable all buttons."
+	scope={{ ButtonDropdown }}
+	code={`
 <ButtonDropdown disabled>
   <ButtonDropdown.Item main>Default Action</ButtonDropdown.Item>
   <ButtonDropdown.Item>Secondary Action</ButtonDropdown.Item>
@@ -38,10 +38,10 @@ Display related but alternate actions for a button.
 />
 
 <Playground
-  title="Loading"
-  desc="Show friendly load indicator."
-  scope={{ ButtonDropdown }}
-  code={`
+	title="Loading"
+	desc="Show friendly load indicator."
+	scope={{ ButtonDropdown }}
+	code={`
 <ButtonDropdown loading>
   <ButtonDropdown.Item main>Default Action</ButtonDropdown.Item>
   <ButtonDropdown.Item>Secondary Action</ButtonDropdown.Item>
@@ -51,9 +51,9 @@ Display related but alternate actions for a button.
 />
 
 <Playground
-  title="Types"
-  scope={{ ButtonDropdown, Spacer }}
-  code={`
+	title="Types"
+	scope={{ ButtonDropdown, Spacer }}
+	code={`
 <>
   <ButtonDropdown type="secondary" scale={0.5}>
     <ButtonDropdown.Item main>Secondary Action</ButtonDropdown.Item>
@@ -75,10 +75,10 @@ Display related but alternate actions for a button.
 />
 
 <Playground
-  title="Multiple Type"
-  desc="Specify the status of a button individually."
-  scope={{ ButtonDropdown }}
-  code={`
+	title="Multiple Type"
+	desc="Specify the status of a button individually."
+	scope={{ ButtonDropdown }}
+	code={`
 <ButtonDropdown scale={2/3} auto>
   <ButtonDropdown.Item main>Check Account</ButtonDropdown.Item>
   <ButtonDropdown.Item>Block Account</ButtonDropdown.Item>
@@ -89,10 +89,10 @@ Display related but alternate actions for a button.
 />
 
 <Playground
-  title="Custom Right Icon"
-  desc="The `color` and `size` of the right icon will be set automatically."
-  scope={{ ButtonDropdown, Plus }}
-  code={`
+	title="Custom Right Icon"
+	desc="The `color` and `size` of the right icon will be set automatically."
+	scope={{ ButtonDropdown, Plus }}
+	code={`
 <ButtonDropdown scale={2/3} auto icon={<Plus />}>
   <ButtonDropdown.Item main>Check Account</ButtonDropdown.Item>
   <ButtonDropdown.Item>Block Account</ButtonDropdown.Item>
@@ -126,7 +126,12 @@ Display related but alternate actions for a button.
 <Attributes.Title>ButtonDropdownTypes</Attributes.Title>
 
 ```ts
-type ButtonDropdownTypes = 'default' | 'secondary' | 'success' | 'warning' | 'error'
+type ButtonDropdownTypes =
+	| 'default'
+	| 'secondary'
+	| 'success'
+	| 'warning'
+	| 'error'
 ```
 
 </Attributes>

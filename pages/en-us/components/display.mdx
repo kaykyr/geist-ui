@@ -2,8 +2,8 @@ import { Layout, Playground, Attributes } from 'lib/components'
 import { Display, Code, Snippet, Image } from 'components'
 
 export const meta = {
-  title: 'Display',
-  group: 'Data Display',
+	title: 'Display',
+	group: 'Data Display',
 }
 
 ## Display
@@ -11,10 +11,10 @@ export const meta = {
 To display important information or images in a central alignment.
 
 <Playground
-  title="Basic"
-  desc="Describe the main part with a paragraph."
-  scope={{ Display, Image }}
-  code={`
+	title="Basic"
+	desc="Describe the main part with a paragraph."
+	scope={{ Display, Image }}
+	code={`
   <Display shadow caption="An open-source design system for building modern websites and applications.">
     <Image width="435px" height="200px" src="/images/geist-banner.png" />
   </Display>
@@ -22,10 +22,10 @@ To display important information or images in a central alignment.
 />
 
 <Playground
-  title="With Code"
-  desc="Show multiline code blocks."
-  scope={{ Display, Code }}
-  code={`
+	title="With Code"
+	desc="Show multiline code blocks."
+	scope={{ Display, Code }}
+	code={`
 () => {
   const codes = \`{
   "build": {
@@ -44,10 +44,10 @@ To display important information or images in a central alignment.
 />
 
 <Playground
-  title="With Snippet"
-  desc="Show shell codes."
-  scope={{ Display, Snippet }}
-  code={`
+	title="With Snippet"
+	desc="Show shell codes."
+	scope={{ Display, Snippet }}
+	code={`
 <Display width="500px" caption="Run this command to install the library.">
   <Snippet type="dark">yarn add @geist-ui/core</Snippet>
 </Display>
@@ -55,10 +55,10 @@ To display important information or images in a central alignment.
 />
 
 <Playground
-  title="Component Caption"
-  desc="Use component on `caption` prop."
-  scope={{ Display, Code, Image }}
-  code={`
+	title="Component Caption"
+	desc="Use component on `caption` prop."
+	scope={{ Display, Code, Image }}
+	code={`
   <Display shadow caption={<p>Browse <Code>geist-ui.dev</Code> for more documentation.</p>}>
     <Image width="650px" height="297px" src="/images/geist-banner.png" />
   </Display>

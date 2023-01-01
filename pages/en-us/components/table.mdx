@@ -2,8 +2,8 @@ import { Layout, Playground, PlaygroundTitle, Attributes } from 'lib/components'
 import { Table, Spacer, Code, Text, Button } from 'components'
 
 export const meta = {
-  title: 'Table',
-  group: 'Data Display',
+	title: 'Table',
+	group: 'Data Display',
 }
 
 ## Table
@@ -11,9 +11,9 @@ export const meta = {
 Display tabular data in format.
 
 <Playground
-  desc="Display formatted data in rows and columns."
-  scope={{ Table }}
-  code={`
+	desc="Display formatted data in rows and columns."
+	scope={{ Table }}
+	code={`
 () => {
   const data = [
     { property: 'type', description: 'Content type', type: 'secondary | warning', default: '-' },
@@ -33,10 +33,10 @@ Display tabular data in format.
 />
 
 <Playground
-  title="compose"
-  desc="Show other components in the table."
-  scope={{ Table, Code, Text }}
-  code={`
+	title="compose"
+	desc="Show other components in the table."
+	scope={{ Table, Code, Text }}
+	code={`
 () => {
   const data = [
     { property: 'type', description: 'Content type', type: 'secondary | warning', default: '-' },
@@ -56,10 +56,10 @@ Display tabular data in format.
 />
 
 <Playground
-  title="width"
-  desc="Specifies the `width` of all or part of the columns."
-  scope={{ Table, Code, Text }}
-  code={`
+	title="width"
+	desc="Specifies the `width` of all or part of the columns."
+	scope={{ Table, Code, Text }}
+	code={`
 () => {
   const data = [
     { property: 'type', description: 'Content type', type: 'secondary | warning', default: '-' },
@@ -79,10 +79,10 @@ Display tabular data in format.
 />
 
 <Playground
-  title="actions"
-  desc="Custom elements can be displayed in the table, and any changes will be immediately rendered."
-  scope={{ Table, Text, Button }}
-  code={`
+	title="actions"
+	desc="Custom elements can be displayed in the table, and any changes will be immediately rendered."
+	scope={{ Table, Text, Button }}
+	code={`
 () => {
   const dataSource = [
     { property: 'type', description: 'Content type', operation: '' },
@@ -110,10 +110,10 @@ Display tabular data in format.
 />
 
 <Playground
-  title="update row"
-  desc="You can use custom elements to update a specific row."
-  scope={{ Table, Text, Button }}
-  code={`
+	title="update row"
+	desc="You can use custom elements to update a specific row."
+	scope={{ Table, Text, Button }}
+	code={`
 () => {
   const dataSource = [
     { property: 'type', description: 'Content type', operation: '' },
@@ -149,9 +149,9 @@ Display tabular data in format.
 />
 
 <Playground
-  title="custom head"
-  scope={{ Table, Code, Text }}
-  code={`
+	title="custom head"
+	scope={{ Table, Code, Text }}
+	code={`
 () => {
   const data = [
     { property: 'type', description: 'Content type', type: 'secondary | warning', default: '-' },
@@ -175,29 +175,33 @@ Display tabular data in format.
 />
 
 <PlaygroundTitle
-  title="TypeScript Example"
-  desc="Get a better experience in TS by specifying a generic type."
+	title="TypeScript Example"
+	desc="Get a better experience in TS by specifying a generic type."
 />
 
 ```tsx
 type User = {
-  name: string
-  role: string
-  records: Array<{ date: string }>
+	name: string
+	role: string
+	records: Array<{ date: string }>
 }
 const renderHandler: TableColumnRender<User> = (value, rowData, index) => {
-  return <div>{rowData.date}</div>
+	return <div>{rowData.date}</div>
 }
 const data: Array<User> = [
-  { name: 'witt', role: 'admin', records: [{ date: '2021-05-01' }] },
+	{ name: 'witt', role: 'admin', records: [{ date: '2021-05-01' }] },
 ]
 
 const MyComponent = () => (
-  <Table<User> data={data}>
-    <Table.Column<User> prop="name" label="username" />
-    <Table.Column<User> prop="role" label="role" />
-    <Table.Column<User> prop="records" label="records" render={renderHandler} />
-  </Table>
+	<Table<User> data={data}>
+		<Table.Column<User> prop="name" label="username" />
+		<Table.Column<User> prop="role" label="role" />
+		<Table.Column<User>
+			prop="records"
+			label="records"
+			render={renderHandler}
+		/>
+	</Table>
 )
 ```
 
@@ -236,9 +240,9 @@ type TableOnRowClick<T> = (rowData: T, rowIndex: number) => void
 
 ```ts
 type TableOnCellClick<T> = (
-  value: T[keyof T],
-  rowIndex: number,
-  colunmIndex: number,
+	value: T[keyof T],
+	rowIndex: number,
+	colunmIndex: number,
 ) => void
 ```
 
@@ -252,9 +256,9 @@ type TableRowClassNameHandler<T> = (rowData: T, rowIndex: number) => string
 
 ```ts
 type TableColumnRender<T extends Record> = (
-  value: T[keyof T],
-  rowData: T,
-  rowIndex: number,
+	value: T[keyof T],
+	rowData: T,
+	rowIndex: number,
 ) => JSX.Element | void
 ```
 

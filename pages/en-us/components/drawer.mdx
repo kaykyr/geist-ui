@@ -2,8 +2,8 @@ import { Layout, Playground, Attributes } from 'lib/components'
 import { Drawer, Button } from 'components'
 
 export const meta = {
-  title: 'Drawer',
-  group: 'Feedback',
+	title: 'Drawer',
+	group: 'Feedback',
 }
 
 ## Drawer
@@ -11,9 +11,9 @@ export const meta = {
 An interactive element fixed to the edge of the screen.
 
 <Playground
-  desc="Basic usage."
-  scope={{ Drawer, Button }}
-  code={`
+	desc="Basic usage."
+	scope={{ Drawer, Button }}
+	code={`
 () => {
   const [state, setState] = React.useState(false)
   return (
@@ -33,9 +33,9 @@ An interactive element fixed to the edge of the screen.
 />
 
 <Playground
-  title="Placement"
-  scope={{ Drawer, Button }}
-  code={`
+	title="Placement"
+	scope={{ Drawer, Button }}
+	code={`
 () => {
   const [state, setState] = React.useState(false)
   const [placement, setPlacement] = React.useState('')

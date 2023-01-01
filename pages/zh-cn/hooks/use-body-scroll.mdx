@@ -2,8 +2,8 @@ import { Layout, Playground, Attributes } from 'lib/components'
 import { Button, Spacer, useBodyScroll, Text } from 'components'
 
 export const meta = {
-  title: '锁定滚动 useBodyScroll',
-  group: '实用工具',
+	title: '锁定滚动 useBodyScroll',
+	group: '实用工具',
 }
 
 ## useBodyScroll / 工具包
@@ -13,9 +13,9 @@ export const meta = {
 如果容器的滚动条在禁止滚动之前被自定义设置了宽度，那么在在禁止滚动后会为自动当前容器添加 `paddingRight` 作为补偿。
 
 <Playground
-  desc="点击按钮以锁定滚动."
-  scope={{ Button, Spacer, useBodyScroll, Text }}
-  code={`
+	desc="点击按钮以锁定滚动."
+	scope={{ Button, Spacer, useBodyScroll, Text }}
+	code={`
 () => {
   const [hidden, setHidden] = useBodyScroll()
   return (
@@ -35,14 +35,13 @@ export const meta = {
 
 ```ts
 type BodyScrollOptions = {
-  delayReset: number  //  延迟一段时间后恢复滚动，默认 0
+	delayReset: number //  延迟一段时间后恢复滚动，默认 0
 }
 
 const useBodyScroll = (
-  elementRef?: RefObject<HTMLElement> | null,
-  options?: BodyScrollOptions,
+	elementRef?: RefObject<HTMLElement> | null,
+	options?: BodyScrollOptions,
 ) => [boolean, Dispatch<SetStateAction<boolean>>]
-
 ```
 
 </Attributes>

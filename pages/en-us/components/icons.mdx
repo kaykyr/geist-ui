@@ -4,24 +4,27 @@ import { Spacer, Tabs, Snippet } from 'components'
 import { Layout, Playground, Attributes, IconsGallery } from 'lib/components'
 
 export const meta = {
-  title: 'Icons',
-  group: 'General',
+	title: 'Icons',
+	group: 'General',
 }
 
 ## Icons
 
 Display semantic vector graphics in SVG format.
 
-<Title title="Installation" desc="Install the package in your project directory." />
+<Title
+	title="Installation"
+	desc="Install the package in your project directory."
+/>
 <Tabs initialValue="yarn">
-  <Tabs.Item label="Yarn" value="yarn">
-    <Spacer h={0.6} />
-    <Snippet width="400px">yarn add @geist-ui/icons</Snippet>
-  </Tabs.Item>
-  <Tabs.Item label="npm" value="npm">
-    <Spacer h={0.6} />
-    <Snippet width="400px">npm i @geist-ui/icons</Snippet>
-  </Tabs.Item>
+	<Tabs.Item label="Yarn" value="yarn">
+		<Spacer h={0.6} />
+		<Snippet width="400px">yarn add @geist-ui/icons</Snippet>
+	</Tabs.Item>
+	<Tabs.Item label="npm" value="npm">
+		<Spacer h={0.6} />
+		<Snippet width="400px">npm i @geist-ui/icons</Snippet>
+	</Tabs.Item>
 </Tabs>
 
 <Playground
@@ -38,17 +41,17 @@ Display semantic vector graphics in SVG format.
 `} />
 
 <Playground
-  title="Color"
-  scope={{ Github }}
-  code={`
+	title="Color"
+	scope={{ Github }}
+	code={`
 <Github color="red" />
 `}
 />
 
 <Playground
-  title="Sizes"
-  scope={{ Github, Spacer }}
-  code={`
+	title="Sizes"
+	scope={{ Github, Spacer }}
+	code={`
 <>
   <Github size={16} /> <Spacer inline w={.35} />
   <Github size={20} /> <Spacer inline w={.35} />

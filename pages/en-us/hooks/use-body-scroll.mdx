@@ -2,8 +2,8 @@ import { Layout, Playground, Attributes } from 'lib/components'
 import { Button, Spacer, Text, useBodyScroll } from 'components'
 
 export const meta = {
-  title: 'useBodyScroll',
-  group: 'Utilities',
+	title: 'useBodyScroll',
+	group: 'Utilities',
 }
 
 ## useBodyScroll
@@ -13,9 +13,9 @@ Disable scrolling behavior for body or any element, it is useful for displaying 
 If the page's scrollbar is set to a user-defined `width` before scrolling is disabled, a `paddingRight` value will be added after disabling to adapt.
 
 <Playground
-  desc="Click button to disable scrolling."
-  scope={{ Button, Spacer, Text, useBodyScroll }}
-  code={`
+	desc="Click button to disable scrolling."
+	scope={{ Button, Spacer, Text, useBodyScroll }}
+	code={`
 () => {
   const [hidden, setHidden] = useBodyScroll()
   return (
@@ -35,12 +35,12 @@ If the page's scrollbar is set to a user-defined `width` before scrolling is dis
 
 ```ts
 type BodyScrollOptions = {
-  delayReset: number  // resume scrolling after a delay, default is 0
+	delayReset: number // resume scrolling after a delay, default is 0
 }
 
 const useBodyScroll = (
-  elementRef?: RefObject<HTMLElement> | null,
-  options?: BodyScrollOptions,
+	elementRef?: RefObject<HTMLElement> | null,
+	options?: BodyScrollOptions,
 ) => [boolean, Dispatch<SetStateAction<boolean>>]
 ```
 

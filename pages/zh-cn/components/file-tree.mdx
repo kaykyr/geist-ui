@@ -2,8 +2,8 @@ import { Layout, Playground, Attributes } from 'lib/components'
 import { Tree, useToasts } from 'components'
 
 export const meta = {
-  title: '文件树 File Tree',
-  group: '数据展示',
+	title: '文件树 File Tree',
+	group: '数据展示',
 }
 
 ## File-Tree / 文件树
@@ -11,10 +11,10 @@ export const meta = {
 使用树结构展示文件与文件夹列表。
 
 <Playground
-  title="Basic"
-  desc="所有的文件和文件夹都会被自动排序以便于浏览。"
-  scope={{ Tree }}
-  code={`
+	title="Basic"
+	desc="所有的文件和文件夹都会被自动排序以便于浏览。"
+	scope={{ Tree }}
+	code={`
 <Tree>
   <Tree.File name="package.json" />
   <Tree.Folder name="components">
@@ -32,10 +32,10 @@ export const meta = {
 />
 
 <Playground
-  title="命令式"
-  desc="使用 `value` 属性渲染一组数据。"
-  scope={{ Tree }}
-  code={`
+	title="命令式"
+	desc="使用 `value` 属性渲染一组数据。"
+	scope={{ Tree }}
+	code={`
 () => {
   const files = [{
     type: 'directory',
@@ -67,10 +67,10 @@ export const meta = {
 />
 
 <Playground
-  title="额外信息"
-  desc="在文件树中渲染额外的信息。"
-  scope={{ Tree }}
-  code={`
+	title="额外信息"
+	desc="在文件树中渲染额外的信息。"
+	scope={{ Tree }}
+	code={`
 () => {
   const files = [{
     type: 'directory',
@@ -109,10 +109,10 @@ export const meta = {
 />
 
 <Playground
-  title="事件"
-  desc="当文件被点击时会报告层级与路径。"
-  scope={{ Tree, useToasts }}
-  code={`
+	title="事件"
+	desc="当文件被点击时会报告层级与路径。"
+	scope={{ Tree, useToasts }}
+	code={`
 () => {
   const { setToast } = useToasts()
   const handler = path => setToast({ text: path })

@@ -1,9 +1,18 @@
 import { Layout, Playground, Attributes } from 'lib/components'
-import { Card, Grid, Link, Spacer, Text, Image, Divider, Code } from 'components'
+import {
+	Card,
+	Grid,
+	Link,
+	Spacer,
+	Text,
+	Image,
+	Divider,
+	Code,
+} from 'components'
 
 export const meta = {
-  title: '卡片 Card',
-  group: '表面',
+	title: '卡片 Card',
+	group: '表面',
 }
 
 ## Card / 卡片
@@ -11,8 +20,8 @@ export const meta = {
 基础的组件容器。
 
 <Playground
-  scope={{ Card }}
-  code={`
+	scope={{ Card }}
+	code={`
 <Card>
   <p>一个基础的卡片。</p>
 </Card>
@@ -20,9 +29,9 @@ export const meta = {
 />
 
 <Playground
-  title="可悬停的"
-  scope={{ Card }}
-  code={`
+	title="可悬停的"
+	scope={{ Card }}
+	code={`
 <Card hoverable>
   <p>可悬停的卡片。</p>
 </Card>
@@ -30,9 +39,9 @@ export const meta = {
 />
 
 <Playground
-  title="阴影"
-  scope={{ Card, Text }}
-  code={`
+	title="阴影"
+	scope={{ Card, Text }}
+	code={`
 <Card shadow>
   <Text h4 my={0}>这是一个 React 组件。</Text>
   <Text>阴影卡片组件。</Text>
@@ -41,10 +50,10 @@ export const meta = {
 />
 
 <Playground
-  title="类型"
-  desc="以各式色彩表达不同的类型或状态。"
-  scope={{ Card, Grid, Text }}
-  code={`
+	title="类型"
+	desc="以各式色彩表达不同的类型或状态。"
+	scope={{ Card, Grid, Text }}
+	code={`
 () => {
   const types = ['secondary', 'success', 'warning', 'error', 'dark', 'alert', 'purple', 'violet', 'cyan']
   return (
@@ -64,9 +73,9 @@ export const meta = {
 />
 
 <Playground
-  title="卡片页脚"
-  scope={{ Card, Link, Grid, Text }}
-  code={`
+	title="卡片页脚"
+	scope={{ Card, Link, Grid, Text }}
+	code={`
 <Grid.Container gap={1.5}>
   <Grid xs={12} justify="center">
     <Card width="100%">
@@ -91,9 +100,9 @@ export const meta = {
 />
 
 <Playground
-  title="组合图片"
-  scope={{ Card, Link, Spacer, Text, Image }}
-  code={`
+	title="组合图片"
+	scope={{ Card, Link, Spacer, Text, Image }}
+	code={`
 <Card width="400px">
   <Image src="https://user-images.githubusercontent.com/11304944/76085431-fd036480-5fec-11ea-8412-9e581425344a.png"
    height="200px" width="400px" draggable={false} />
@@ -107,10 +116,10 @@ export const meta = {
 />
 
 <Playground
-  title="组合分割线"
-  desc="使用分割线展示不同类型的内容。"
-  scope={{ Card, Text, Divider, Code }}
-  code={`
+	title="组合分割线"
+	desc="使用分割线展示不同类型的内容。"
+	scope={{ Card, Text, Divider, Code }}
+	code={`
 <Card width="400px">
   <Card.Content>
     <Text b my={0}>语法描述</Text>
@@ -151,17 +160,17 @@ export const meta = {
 
 ```ts
 type CardType =
-  | 'default'
-  | 'secondary'
-  | 'success'
-  | 'warning'
-  | 'error'
-  | 'dark'
-  | 'lite'
-  | 'alert'
-  | 'purple'
-  | 'violet'
-  | 'cyan'
+	| 'default'
+	| 'secondary'
+	| 'success'
+	| 'warning'
+	| 'error'
+	| 'dark'
+	| 'lite'
+	| 'alert'
+	| 'purple'
+	| 'violet'
+	| 'cyan'
 ```
 
 </Attributes>

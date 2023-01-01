@@ -2,8 +2,8 @@ import { Layout, Playground, Attributes } from 'lib/components'
 import { Keyboard } from 'components'
 
 export const meta = {
-  title: 'Keyboard',
-  group: 'Data Display',
+	title: 'Keyboard',
+	group: 'Data Display',
 }
 
 ## Keyboard
@@ -13,16 +13,16 @@ Display keyboard input that triggers an action.
 The `Keyboard` can only display layout styles, if you need to bind the keyboard events, please read subsection [useKeyboard](/en-us/hooks/use-keyboard).
 
 <Playground
-  scope={{ Keyboard }}
-  code={`
+	scope={{ Keyboard }}
+	code={`
 <Keyboard>f</Keyboard>
 `}
 />
 
 <Playground
-  title="modifiers"
-  scope={{ Keyboard }}
-  code={`
+	title="modifiers"
+	scope={{ Keyboard }}
+	code={`
 <div>
   <Keyboard command mr="10px" />
   <Keyboard shift mr="10px" />
@@ -33,9 +33,9 @@ The `Keyboard` can only display layout styles, if you need to bind the keyboard 
 />
 
 <Playground
-  title="combination"
-  scope={{ Keyboard }}
-  code={`
+	title="combination"
+	scope={{ Keyboard }}
+	code={`
 <div>
   <Keyboard command mr="10px">f</Keyboard>
   <Keyboard shift mr="10px">e</Keyboard>

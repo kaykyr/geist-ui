@@ -2,9 +2,9 @@ import { Layout, Playground, Attributes } from 'lib/components'
 import { Button, useTheme } from 'components'
 
 export const meta = {
-  title: 'useTheme',
-  group: 'Development',
-  index: 100,
+	title: 'useTheme',
+	group: 'Development',
+	index: 100,
 }
 
 ## useTheme
@@ -20,9 +20,9 @@ the properties of the custom component will change according to the current Geis
 switching themes in the upper right corner of the website, the color of the components we create will also change with the theme.
 
 <Playground
-  scope={{ useTheme, Button }}
-  desc=""
-  code={`
+	scope={{ useTheme, Button }}
+	desc=""
+	code={`
 () => {
   const theme = useTheme()
   return (
@@ -51,12 +51,12 @@ switching themes in the upper right corner of the website, the color of the comp
 const theme: GeistUIThemes = useTheme()
 
 export type GeistUIThemes = {
-  type: string
-  font: GeistUIThemesFont
-  layout: GeistUIThemesLayout
-  palette: GeistUIThemesPalette
-  breakpoints: GeistUIThemesBreakpoints
-  expressiveness: GeistUIThemesExpressiveness
+	type: string
+	font: GeistUIThemesFont
+	layout: GeistUIThemesLayout
+	palette: GeistUIThemesPalette
+	breakpoints: GeistUIThemesBreakpoints
+	expressiveness: GeistUIThemesExpressiveness
 }
 ```
 
@@ -64,14 +64,14 @@ export type GeistUIThemes = {
 
 ```ts
 import {
-  GeistUIThemes,
-  GeistUIThemesFont,
-  GeistUIThemesPalette,
-  GeistUIThemesExpressiveness,
-  GeistUIThemesLayout,
+	GeistUIThemes,
+	GeistUIThemesFont,
+	GeistUIThemesPalette,
+	GeistUIThemesExpressiveness,
+	GeistUIThemesLayout,
 } from '@geist-ui/core'
 
-const myFontTheme: GeistUIThemesFont = { }
+const myFontTheme: GeistUIThemesFont = {}
 ```
 
 </Attributes>

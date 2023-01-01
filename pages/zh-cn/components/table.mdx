@@ -2,8 +2,8 @@ import { Layout, Playground, PlaygroundTitle, Attributes } from 'lib/components'
 import { Table, Spacer, Code, Text, Button } from 'components'
 
 export const meta = {
-  title: '表格 Table',
-  group: '数据展示',
+	title: '表格 Table',
+	group: '数据展示',
 }
 
 ## Table / 表格
@@ -11,9 +11,9 @@ export const meta = {
 以规则的表格显示数据集。
 
 <Playground
-  desc="显示规则化的行和列。"
-  scope={{ Table }}
-  code={`
+	desc="显示规则化的行和列。"
+	scope={{ Table }}
+	code={`
 () => {
   const data = [
     { property: 'type', description: 'Content type', type: 'secondary | warning', default: '-' },
@@ -33,10 +33,10 @@ export const meta = {
 />
 
 <Playground
-  title="组合"
-  desc="在表格中显示其他组件。"
-  scope={{ Table, Code, Text }}
-  code={`
+	title="组合"
+	desc="在表格中显示其他组件。"
+	scope={{ Table, Code, Text }}
+	code={`
 () => {
   const data = [
     { property: 'type', description: 'Content type', type: 'secondary | warning', default: '-' },
@@ -56,10 +56,10 @@ export const meta = {
 />
 
 <Playground
-  title="宽度"
-  desc="为任意列指定宽度，剩下列会自动适应。"
-  scope={{ Table, Code, Text }}
-  code={`
+	title="宽度"
+	desc="为任意列指定宽度，剩下列会自动适应。"
+	scope={{ Table, Code, Text }}
+	code={`
 () => {
   const data = [
     { property: 'type', description: 'Content type', type: 'secondary | warning', default: '-' },
@@ -79,10 +79,10 @@ export const meta = {
 />
 
 <Playground
-  title="操作"
-  desc="显示自定义的按钮并操作数据，任何更改会立刻呈现。"
-  scope={{ Table, Text, Button }}
-  code={`
+	title="操作"
+	desc="显示自定义的按钮并操作数据，任何更改会立刻呈现。"
+	scope={{ Table, Text, Button }}
+	code={`
 () => {
   const dataSource = [
     { property: 'type', description: 'Content type', operation: '' },
@@ -110,10 +110,10 @@ export const meta = {
 />
 
 <Playground
-  title="更新行"
-  desc="你可以更新指定的行数据。"
-  scope={{ Table, Text, Button }}
-  code={`
+	title="更新行"
+	desc="你可以更新指定的行数据。"
+	scope={{ Table, Text, Button }}
+	code={`
 () => {
   const dataSource = [
     { property: 'type', description: 'Content type', operation: '' },
@@ -149,9 +149,9 @@ export const meta = {
 />
 
 <Playground
-  title="定制头"
-  scope={{ Table, Code, Text }}
-  code={`
+	title="定制头"
+	scope={{ Table, Code, Text }}
+	code={`
 () => {
   const data = [
     { property: 'type', description: 'Content type', type: 'secondary | warning', default: '-' },
@@ -174,27 +174,34 @@ export const meta = {
 `}
 />
 
-<PlaygroundTitle title="TypeScript 示例" desc="在 TS 中通过指定泛型获得更好的体验。" />
+<PlaygroundTitle
+	title="TypeScript 示例"
+	desc="在 TS 中通过指定泛型获得更好的体验。"
+/>
 
 ```tsx
 type User = {
-  name: string
-  role: string
-  records: Array<{ date: string }>
+	name: string
+	role: string
+	records: Array<{ date: string }>
 }
 const renderHandler: TableColumnRender<User> = (value, rowData, index) => {
-  return <div>{rowData.date}</div>
+	return <div>{rowData.date}</div>
 }
 const data: Array<User> = [
-  { name: 'witt', role: 'admin', records: [{ date: '2021-05-01' }] },
+	{ name: 'witt', role: 'admin', records: [{ date: '2021-05-01' }] },
 ]
 
 const MyComponent = () => (
-  <Table<User> data={data}>
-    <Table.Column<User> prop="name" label="用户名" />
-    <Table.Column<User> prop="role" label="角色" />
-    <Table.Column<User> prop="records" label="记录" render={renderHandler} />
-  </Table>
+	<Table<User> data={data}>
+		<Table.Column<User> prop="name" label="用户名" />
+		<Table.Column<User> prop="role" label="角色" />
+		<Table.Column<User>
+			prop="records"
+			label="记录"
+			render={renderHandler}
+		/>
+	</Table>
 )
 ```
 
@@ -233,9 +240,9 @@ type TableOnRowClick<T> = (rowData: T, rowIndex: number) => void
 
 ```ts
 type TableOnCellClick<T> = (
-  value: T[keyof T],
-  rowIndex: number,
-  colunmIndex: number,
+	value: T[keyof T],
+	rowIndex: number,
+	colunmIndex: number,
 ) => void
 ```
 
@@ -249,9 +256,9 @@ type TableRowClassNameHandler<T> = (rowData: T, rowIndex: number) => string
 
 ```ts
 type TableColumnRender<T extends Record> = (
-  value: T[keyof T],
-  rowData: T,
-  rowIndex: number,
+	value: T[keyof T],
+	rowData: T,
+	rowIndex: number,
 ) => JSX.Element | void
 ```
 

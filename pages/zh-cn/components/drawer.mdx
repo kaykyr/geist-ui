@@ -2,8 +2,8 @@ import { Layout, Playground, Attributes } from 'lib/components'
 import { Drawer, Button } from 'components'
 
 export const meta = {
-  title: '抽屉 Drawer',
-  group: '反馈',
+	title: '抽屉 Drawer',
+	group: '反馈',
 }
 
 ## Drawer / 抽屉
@@ -11,9 +11,9 @@ export const meta = {
 固定在屏幕边缘的可交互元素组。
 
 <Playground
-  desc="基础示例。"
-  scope={{ Drawer, Button }}
-  code={`
+	desc="基础示例。"
+	scope={{ Drawer, Button }}
+	code={`
 () => {
   const [state, setState] = React.useState(false)
   return (
@@ -33,9 +33,9 @@ export const meta = {
 />
 
 <Playground
-  title="定位"
-  scope={{ Drawer, Button }}
-  code={`
+	title="定位"
+	scope={{ Drawer, Button }}
+	code={`
 () => {
   const [state, setState] = React.useState(false)
   const [placement, setPlacement] = React.useState('')

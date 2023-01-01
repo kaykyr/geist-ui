@@ -2,8 +2,8 @@ import { Layout, Playground, Attributes } from 'lib/components'
 import { Loading, Spacer, Grid } from 'components'
 
 export const meta = {
-  title: 'Loading',
-  group: 'Feedback',
+	title: 'Loading',
+	group: 'Feedback',
 }
 
 ## Loading
@@ -11,26 +11,26 @@ export const meta = {
 Indicate an action running in the background.
 
 <Playground
-  scope={{ Loading, Spacer }}
-  code={`
+	scope={{ Loading, Spacer }}
+	code={`
 <Loading />
 `}
 />
 
 <Playground
-  title="with text"
-  desc="Customize text next to icon."
-  scope={{ Loading }}
-  code={`
+	title="with text"
+	desc="Customize text next to icon."
+	scope={{ Loading }}
+	code={`
 <Loading>Loading</Loading>
 `}
 />
 
 <Playground
-  title="types"
-  desc="Loading indicators in different states."
-  scope={{ Loading, Grid }}
-  code={`
+	title="types"
+	desc="Loading indicators in different states."
+	scope={{ Loading, Grid }}
+	code={`
 <Grid.Container gap={2.5}>
   <Grid xs={24}>
     <Loading type="success" />
@@ -49,10 +49,10 @@ Indicate an action running in the background.
 />
 
 <Playground
-  title="spaces"
-  desc="Customize the space between points. (the ratio is relative to the current `size`)"
-  scope={{ Loading, Grid }}
-  code={`
+	title="spaces"
+	desc="Customize the space between points. (the ratio is relative to the current `size`)"
+	scope={{ Loading, Grid }}
+	code={`
 <Grid.Container gap={2.5}>
   <Grid xs={24}>
     <Loading spaceRatio={2.5} />

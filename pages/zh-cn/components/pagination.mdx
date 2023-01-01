@@ -8,8 +8,8 @@ import ChevronRightCircleFill from '@geist-ui/icons/chevronRightCircleFill'
 import ChevronLeftCircleFill from '@geist-ui/icons/chevronLeftCircleFill'
 
 export const meta = {
-  title: '分页 Pagination',
-  group: '导航',
+	title: '分页 Pagination',
+	group: '导航',
 }
 
 ## Pagination / 分页
@@ -17,18 +17,18 @@ export const meta = {
 多个页面之间的导航与鉴别。
 
 <Playground
-  scope={{ Pagination }}
-  desc="默认的分页会自动收缩与扩展。"
-  code={`
+	scope={{ Pagination }}
+	desc="默认的分页会自动收缩与扩展。"
+	code={`
 <Pagination count={20} initialPage={3} />
 `}
 />
 
 <Playground
-  title="Limit"
-  desc="调整最大可展示页面数。"
-  scope={{ Pagination }}
-  code={`
+	title="Limit"
+	desc="调整最大可展示页面数。"
+	scope={{ Pagination }}
+	code={`
 <>
   <Pagination count={10} limit={10} />
   <Pagination count={5} />
@@ -40,19 +40,19 @@ export const meta = {
 />
 
 <Playground
-  title="Icon"
-  desc="用图标定制按钮。"
-  scope={{
-    Spacer,
-    Pagination,
-    ChevronRight,
-    ChevronLeft,
-    ChevronRightCircle,
-    ChevronLeftCircle,
-    ChevronRightCircleFill,
-    ChevronLeftCircleFill,
-  }}
-  code={`
+	title="Icon"
+	desc="用图标定制按钮。"
+	scope={{
+		Spacer,
+		Pagination,
+		ChevronRight,
+		ChevronLeft,
+		ChevronRightCircle,
+		ChevronLeftCircle,
+		ChevronRightCircleFill,
+		ChevronLeftCircleFill,
+	}}
+	code={`
 <>
   <Pagination count={5}>
    <Pagination.Next><ChevronRight /></Pagination.Next>

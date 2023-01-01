@@ -2,9 +2,9 @@ import { Layout, Playground, Attributes } from 'lib/components'
 import { useKeyboard, KeyCode, KeyMod, Keyboard, Input, Link } from 'components'
 
 export const meta = {
-  title: '键盘事件 useKeyboard',
-  group: '组件增强',
-  index: 5,
+	title: '键盘事件 useKeyboard',
+	group: '组件增强',
+	index: 5,
 }
 
 ## useKeyboard / 键盘事件
@@ -12,9 +12,9 @@ export const meta = {
 用户监听多个键盘事件的钩子。
 
 <Playground
-  desc="全局的键盘事件。"
-  scope={{ useKeyboard, KeyCode, KeyMod, Keyboard }}
-  code={`
+	desc="全局的键盘事件。"
+	scope={{ useKeyboard, KeyCode, KeyMod, Keyboard }}
+	code={`
 () => {
   useKeyboard(
     () => alert('保存成功！'),
@@ -26,10 +26,10 @@ export const meta = {
 />
 
 <Playground
-  title="元素事件"
-  desc="只在指定元素上监听元素事件。"
-  scope={{ useKeyboard, KeyCode, KeyMod, Keyboard, Input }}
-  code={`
+	title="元素事件"
+	desc="只在指定元素上监听元素事件。"
+	scope={{ useKeyboard, KeyCode, KeyMod, Keyboard, Input }}
+	code={`
 () => {
   const { bindings } = useKeyboard(
     () => alert('A 是不被允许的'),

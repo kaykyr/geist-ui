@@ -2,9 +2,9 @@ import { Layout, Playground, Attributes } from 'lib/components'
 import { useCurrentState, Link, Button, Spacer } from 'components'
 
 export const meta = {
-  title: 'useCurrentState',
-  group: 'Development',
-  index: 101,
+	title: 'useCurrentState',
+	group: 'Development',
+	index: 101,
 }
 
 ## useCurrentState
@@ -19,8 +19,8 @@ try <Link target="_blank" color href="https://reactjs.org/docs/hooks-reference.h
 This is custom React hooks, you need to follow the <Link target="_blank" color href="https://reactjs.org/docs/hooks-rules.html">Basic Rules</Link> when you use it.
 
 <Playground
-  scope={{ useCurrentState, Button }}
-  code={`
+	scope={{ useCurrentState, Button }}
+	code={`
 () => {
   const [value, setValue] = React.useState(0)
   const [value2, setValue2, value2Ref] = useCurrentState(0)

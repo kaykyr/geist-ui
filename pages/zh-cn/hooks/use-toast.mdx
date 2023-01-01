@@ -2,9 +2,9 @@ import { Layout, Playground, Attributes } from 'lib/components'
 import { useToasts, Button, Spacer, Link } from 'components'
 
 export const meta = {
-  title: '通知 useToast',
-  group: '组件增强',
-  index: 12,
+	title: '通知 useToast',
+	group: '组件增强',
+	index: 12,
 }
 
 ## useToast / 通知
@@ -12,9 +12,9 @@ export const meta = {
 显示重要的全局通知信息。
 
 <Playground
-  desc="基础示例。"
-  scope={{ Button, useToasts }}
-  code={`
+	desc="基础示例。"
+	scope={{ Button, useToasts }}
+	code={`
 () => {
   const { setToast } = useToasts()
   const click = () => setToast({ text: '你正在浏览文档站点。' })
@@ -24,10 +24,10 @@ export const meta = {
 />
 
 <Playground
-  title="多行"
-  desc="显示多行或过长的文本。"
-  scope={{ Button, useToasts }}
-  code={`
+	title="多行"
+	desc="显示多行或过长的文本。"
+	scope={{ Button, useToasts }}
+	code={`
 () => {
   const { setToast } = useToasts()
   const click = () => setToast({ text: 'CSS是一门基于规则的语言 —— 你能定义用于你的网页中特定元素样式的一组规则. 比如“我希望页面中的主标题是红色的大字”' })
@@ -37,10 +37,10 @@ export const meta = {
 />
 
 <Playground
-  title="动作"
-  desc="在通知中附加一个按钮。"
-  scope={{ Button, useToasts }}
-  code={`
+	title="动作"
+	desc="在通知中附加一个按钮。"
+	scope={{ Button, useToasts }}
+	code={`
 () => {
   const { setToast } = useToasts()
   const action = {
@@ -57,10 +57,10 @@ export const meta = {
 />
 
 <Playground
-  title="取消"
-  desc="使用 `passive` (消极地) 改变按钮的状态与样式。"
-  scope={{ Button, useToasts }}
-  code={`
+	title="取消"
+	desc="使用 `passive` (消极地) 改变按钮的状态与样式。"
+	scope={{ Button, useToasts }}
+	code={`
 () => {
   const { setToast } = useToasts()
   const action = {
@@ -78,10 +78,10 @@ export const meta = {
 />
 
 <Playground
-  title="自定义模板"
-  desc="以 `ReactNode` 代替字符串展示更丰富的信息。"
-  scope={{ Button, useToasts, Link }}
-  code={`
+	title="自定义模板"
+	desc="以 `ReactNode` 代替字符串展示更丰富的信息。"
+	scope={{ Button, useToasts, Link }}
+	code={`
 () => {
   const { setToast } = useToasts()
   const click = () => setToast({
@@ -94,9 +94,9 @@ export const meta = {
 />
 
 <Playground
-  title="类型"
-  scope={{ Button, useToasts, Spacer }}
-  code={`
+	title="类型"
+	scope={{ Button, useToasts, Spacer }}
+	code={`
 () => {
   const { setToast } = useToasts()
   const click = type => setToast({
@@ -167,9 +167,12 @@ type ToastPlacement = 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight'
 
 ```ts
 interface ToastAction {
-  name: string
-  handler: (event: React.MouseEventHandler<HTMLButtonElement>, cancel: Function) => void
-  passive?: boolean
+	name: string
+	handler: (
+		event: React.MouseEventHandler<HTMLButtonElement>,
+		cancel: Function,
+	) => void
+	passive?: boolean
 }
 ```
 

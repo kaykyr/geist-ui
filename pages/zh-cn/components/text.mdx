@@ -2,9 +2,9 @@ import { Layout, Playground, Attributes } from 'lib/components'
 import { Text } from 'components'
 
 export const meta = {
-  title: '文本 Text',
-  group: '通用',
-  index: 10,
+	title: '文本 Text',
+	group: '通用',
+	index: 10,
 }
 
 ## Text / 文本
@@ -12,18 +12,18 @@ export const meta = {
 使用预定义的排版样式显示文本。
 
 <Playground
-  title="标题"
-  scope={{ Text }}
-  code={`
+	title="标题"
+	scope={{ Text }}
+	code={`
 <Text h1>开始我们的 Geist 之旅。</Text>
 `}
 />
 
 <Playground
-  title="段落"
-  desc="在 `Text` 组件上添加 `p` 与 `b` 以渲染不同元素。"
-  scope={{ Text }}
-  code={`
+	title="段落"
+	desc="在 `Text` 组件上添加 `p` 与 `b` 以渲染不同元素。"
+	scope={{ Text }}
+	code={`
 <>
   <Text p>
   函数用来封装可复用的功能。如果没有函数，一段特定的操作过程用几次就要重复写几次，而使用函数则只需写下函数名和一些简短的信息。
@@ -36,9 +36,9 @@ export const meta = {
 />
 
 <Playground
-  title="较小的"
-  scope={{ Text }}
-  code={`
+	title="较小的"
+	scope={{ Text }}
+	code={`
 <>
   <Text small>
   函数用来封装可复用的功能。如果没有函数，一段特定的操作过程用几次就要重复写几次，而使用函数则只需写下函数名和一些简短的信息。
@@ -51,9 +51,9 @@ export const meta = {
 />
 
 <Playground
-  title="引用"
-  scope={{ Text }}
-  code={`
+	title="引用"
+	scope={{ Text }}
+	code={`
 <Text blockquote my={0}>
   事件能为网页添加真实的交互能力。
 </Text>
@@ -61,10 +61,10 @@ export const meta = {
 />
 
 <Playground
-  title="色彩"
-  desc="以不同的色彩区分文字的状态。"
-  scope={{ Text }}
-  code={`
+	title="色彩"
+	desc="以不同的色彩区分文字的状态。"
+	scope={{ Text }}
+	code={`
 <Text b i style={{ letterSpacing: '0.6px' }}>
   <Text span type="success">G</Text>
   <Text span type="warning">e</Text>
@@ -94,9 +94,9 @@ export const meta = {
 `} />
 
 <Playground
-  title="字体大小"
-  scope={{ Text }}
-  code={`
+	title="字体大小"
+	scope={{ Text }}
+	code={`
 <>
   <Text font="12px" mt={0}>Font Size: 12px;</Text>
   <Text font="14px">Font Size: 14px;</Text>

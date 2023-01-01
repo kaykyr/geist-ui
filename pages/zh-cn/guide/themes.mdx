@@ -1,9 +1,9 @@
 import Layout from 'lib/components/layout'
 
 export const meta = {
-  title: '主题',
-  group: '定制化',
-  index: 10,
+	title: '主题',
+	group: '定制化',
+	index: 10,
 }
 
 ## 主题
@@ -24,16 +24,16 @@ export const meta = {
 import { CssBaseline, GeistProvider } from '@geist-ui/core'
 
 const App = () => {
-  const [themeType, setThemeType] = useState('light')
-  const switchThemes = () => {
-    setThemeType(last => (last === 'dark' ? 'light' : 'dark'))
-  }
-  return (
-    <GeistProvider themeType={themeType}>
-      <CssBaseline />
-      <YourComponent onClick={switchThemes} />
-    </GeistProvider>
-  )
+	const [themeType, setThemeType] = useState('light')
+	const switchThemes = () => {
+		setThemeType((last) => (last === 'dark' ? 'light' : 'dark'))
+	}
+	return (
+		<GeistProvider themeType={themeType}>
+			<CssBaseline />
+			<YourComponent onClick={switchThemes} />
+		</GeistProvider>
+	)
 }
 ```
 
@@ -46,17 +46,17 @@ const App = () => {
 import { CssBaseline, GeistProvider, Themes } from '@geist-ui/core'
 
 const myTheme1 = Themes.createFromLight({
-  type: 'coolTheme',
-  palette: {
-    success: '#000',
-  },
+	type: 'coolTheme',
+	palette: {
+		success: '#000',
+	},
 })
 
 const App = () => (
-  <GeistProvider themes={[myTheme1]} themeType="coolTheme">
-    <CssBaseline />
-    <YourAppComponent onClick={switchThemes} />
-  </GeistProvider>
+	<GeistProvider themes={[myTheme1]} themeType="coolTheme">
+		<CssBaseline />
+		<YourAppComponent onClick={switchThemes} />
+	</GeistProvider>
 )
 ```
 
@@ -80,19 +80,19 @@ const myTheme2 = Themes.create(myBaseTheme, {
 
 ```ts
 import {
-  GeistUIThemes,
-  GeistUIThemesFont,
-  GeistUIThemesPalette,
-  GeistUIThemesExpressiveness,
-  GeistUIThemesLayout,
+	GeistUIThemes,
+	GeistUIThemesFont,
+	GeistUIThemesPalette,
+	GeistUIThemesExpressiveness,
+	GeistUIThemesLayout,
 } from '@geist-ui/core'
 
 // 使用示例
 const myStyles: GeistUIThemes = {
-  /* ... */
+	/* ... */
 }
 const myPalette: Partial<GeistUIThemesPalette> = {
-  /* ... */
+	/* ... */
 }
 ```
 
@@ -123,9 +123,9 @@ const MyPage = () => (
 
 ```jsx
 const MyPage = () => (
-  <Row>
-    <Button style={{ margin: '20px' }}>Click me!</Button>
-  </Row>
+	<Row>
+		<Button style={{ margin: '20px' }}>Click me!</Button>
+	</Row>
 )
 ```
 
@@ -138,12 +138,12 @@ const MyPage = () => (
 import { useTheme } from '@geist-ui/core'
 
 const MyComponent = () => {
-  const theme = useTheme()
-  return (
-    <div style={{ color: theme.palette.success }}>
-      <span>hello world!</span>
-    </div>
-  )
+	const theme = useTheme()
+	return (
+		<div style={{ color: theme.palette.success }}>
+			<span>hello world!</span>
+		</div>
+	)
 }
 ```
 
@@ -151,13 +151,13 @@ const MyComponent = () => {
 
 `Themes` 包含了一些静态方法 (纯函数)，这在你自定义主题时会很有用：
 
-- `Themes.create` - 创建一个新主题。
-- `Themes.createFromDark` - 以暗色模式为基础创建新主题。
-- `Themes.createFromLight` - 以亮色模式为基础创建新主题。
-- `Themes.isPresetTheme` - 检查一个主题对象是否来自 Geist UI。
-- `Themes.isAvailableThemeType` - 检查一个主题名是否可用。(是否重复)
-- `Themes.hasUserCustomTheme` - 检查一组主题中是否包含自定义的主题。
-- `Themes.getPresets` - 获取一组由 Geist UI 内置的默认主题。
-- `Themes.getPresetStaticTheme` - 获取一个由 Geist UI 内置的默认主题 (默认加载的)。
+-   `Themes.create` - 创建一个新主题。
+-   `Themes.createFromDark` - 以暗色模式为基础创建新主题。
+-   `Themes.createFromLight` - 以亮色模式为基础创建新主题。
+-   `Themes.isPresetTheme` - 检查一个主题对象是否来自 Geist UI。
+-   `Themes.isAvailableThemeType` - 检查一个主题名是否可用。(是否重复)
+-   `Themes.hasUserCustomTheme` - 检查一组主题中是否包含自定义的主题。
+-   `Themes.getPresets` - 获取一组由 Geist UI 内置的默认主题。
+-   `Themes.getPresetStaticTheme` - 获取一个由 Geist UI 内置的默认主题 (默认加载的)。
 
 export default ({ children }) => <Layout meta={meta}>{children}</Layout>

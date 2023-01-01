@@ -8,8 +8,8 @@ import ChevronRightCircleFill from '@geist-ui/icons/chevronRightCircleFill'
 import ChevronLeftCircleFill from '@geist-ui/icons/chevronLeftCircleFill'
 
 export const meta = {
-  title: 'Pagination',
-  group: 'Navigation',
+	title: 'Pagination',
+	group: 'Navigation',
 }
 
 ## Pagination
@@ -17,17 +17,17 @@ export const meta = {
 Navigation and identification between multiple pages.
 
 <Playground
-  scope={{ Pagination }}
-  code={`
+	scope={{ Pagination }}
+	code={`
 <Pagination count={20} initialPage={3} />
 `}
 />
 
 <Playground
-  title="Limit"
-  desc="The maximum number of pages that can be displayed"
-  scope={{ Pagination }}
-  code={`
+	title="Limit"
+	desc="The maximum number of pages that can be displayed"
+	scope={{ Pagination }}
+	code={`
 <>
   <Pagination count={10} limit={10} />
   <Pagination count={5} />
@@ -39,19 +39,19 @@ Navigation and identification between multiple pages.
 />
 
 <Playground
-  title="Icon"
-  desc="Customize buttons as icons."
-  scope={{
-    Spacer,
-    Pagination,
-    ChevronRight,
-    ChevronLeft,
-    ChevronRightCircle,
-    ChevronLeftCircle,
-    ChevronRightCircleFill,
-    ChevronLeftCircleFill,
-  }}
-  code={`
+	title="Icon"
+	desc="Customize buttons as icons."
+	scope={{
+		Spacer,
+		Pagination,
+		ChevronRight,
+		ChevronLeft,
+		ChevronRightCircle,
+		ChevronLeftCircle,
+		ChevronRightCircleFill,
+		ChevronLeftCircleFill,
+	}}
+	code={`
 <>
   <Pagination count={5}>
    <Pagination.Next><ChevronRight /></Pagination.Next>

@@ -2,8 +2,8 @@ import { Layout, Playground, Attributes } from 'lib/components'
 import { Checkbox, Spacer } from 'components'
 
 export const meta = {
-  title: 'Checkbox',
-  group: 'Data Entry',
+	title: 'Checkbox',
+	group: 'Data Entry',
 }
 
 ## Checkbox
@@ -11,18 +11,18 @@ export const meta = {
 Displays a boolean value.
 
 <Playground
-  desc="Change state with `checked` props."
-  scope={{ Checkbox }}
-  code={`
+	desc="Change state with `checked` props."
+	scope={{ Checkbox }}
+	code={`
 <Checkbox checked={true}>Sydney</Checkbox>
 `}
 />
 
 <Playground
-  title="sizes"
-  desc="Checkbox of different sizes."
-  scope={{ Checkbox }}
-  code={`
+	title="sizes"
+	desc="Checkbox of different sizes."
+	scope={{ Checkbox }}
+	code={`
 <>
   <Checkbox mr="15px" checked={true} scale={0.25}>scale-0.25</Checkbox>
   <Checkbox mr="15px" checked={true} scale={0.5}>scale-0.5</Checkbox>
@@ -32,10 +32,10 @@ Displays a boolean value.
 />
 
 <Playground
-  title="Type"
-  desc="Differentiate states by color."
-  scope={{ Checkbox, Spacer }}
-  code={`
+	title="Type"
+	desc="Differentiate states by color."
+	scope={{ Checkbox, Spacer }}
+	code={`
 <>
   <Checkbox checked={true} type="default">Default</Checkbox>
   <Spacer h={.5} />
@@ -49,9 +49,9 @@ Displays a boolean value.
 />
 
 <Playground
-  title="disable"
-  scope={{ Checkbox, Spacer }}
-  code={`
+	title="disable"
+	scope={{ Checkbox, Spacer }}
+	code={`
 <>
   <Checkbox>Sydney</Checkbox>
   <Spacer h={.5} />
@@ -61,10 +61,10 @@ Displays a boolean value.
 />
 
 <Playground
-  title="group"
-  desc="Manage a set of `Checkbox`."
-  scope={{ Checkbox, Spacer }}
-  code={`
+	title="group"
+	desc="Manage a set of `Checkbox`."
+	scope={{ Checkbox, Spacer }}
+	code={`
 () => {
   const handler = value => {
     console.log(value)
@@ -114,14 +114,14 @@ type CheckboxTypes = 'default' | 'secondary' | 'success' | 'warning' | 'error'
 
 ```ts
 interface CheckboxEventTarget {
-  checked: boolean
+	checked: boolean
 }
 
 export interface CheckboxEvent {
-  target: CheckboxEventTarget
-  stopPropagation: () => void
-  preventDefault: () => void
-  nativeEvent: React.ChangeEvent
+	target: CheckboxEventTarget
+	stopPropagation: () => void
+	preventDefault: () => void
+	nativeEvent: React.ChangeEvent
 }
 ```
 

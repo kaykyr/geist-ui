@@ -2,9 +2,9 @@ import { Layout, Playground, Attributes } from 'lib/components'
 import { Button, useTheme } from 'components'
 
 export const meta = {
-  title: '类名合并 useClasses',
-  group: '开发者',
-  index: 105,
+	title: '类名合并 useClasses',
+	group: '开发者',
+	index: 105,
 }
 
 ## useClasses
@@ -24,13 +24,13 @@ _Geist_ 组件库内不需要复杂的类名合并、处理多样性的表达式
 import { useClasses } from '@geist-ui/core'
 
 export default ({ className }) => {
-  const myClass = 'button'
+	const myClass = 'button'
 
-  // output -> "button "
-  return <div className={`${myClass} ${className}`} />
+	// output -> "button "
+	return <div className={`${myClass} ${className}`} />
 
-  // output -> "button"
-  return <div className={useClasses(myClass, className)} />
+	// output -> "button"
+	return <div className={useClasses(myClass, className)} />
 }
 ```
 
@@ -38,11 +38,11 @@ export default ({ className }) => {
 
 ```tsx
 export default ({ className }) => {
-  const classes = useClasses('button', isHover ? 'hover' : 'base', className)
+	const classes = useClasses('button', isHover ? 'hover' : 'base', className)
 
-  // output -> "button hover"
-  // output -> "button base"
-  return <div className={classes} />
+	// output -> "button hover"
+	// output -> "button base"
+	return <div className={classes} />
 }
 ```
 
@@ -52,14 +52,14 @@ export default ({ className }) => {
 
 ```tsx
 export default ({ active, disabled }) => {
-  const classes = useClasses('button', {
-    active,
-    'button-disabled': disabled,
-  })
+	const classes = useClasses('button', {
+		active,
+		'button-disabled': disabled,
+	})
 
-  // output -> "button active"
-  // output -> "button active button-disabled"
-  return <div className={classes} />
+	// output -> "button active"
+	// output -> "button active button-disabled"
+	return <div className={classes} />
 }
 ```
 
@@ -80,7 +80,9 @@ useClasses(false, 'btn', '') // output -> "btn"
 <Attributes.Title>useClasses</Attributes.Title>
 
 ```ts
-type useClasses = (input: string | Object | null | undefined | boolean | number) => string
+type useClasses = (
+	input: string | Object | null | undefined | boolean | number,
+) => string
 ```
 
 </Attributes>

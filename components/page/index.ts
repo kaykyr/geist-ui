@@ -4,10 +4,10 @@ import PageContent from './page-content'
 import PageFooter from './page-footer'
 
 export type PageComponentType = typeof Page & {
-  Header: typeof PageHeader
-  Content: typeof PageContent
-  Body: typeof PageContent
-  Footer: typeof PageFooter
+	Header: typeof PageHeader
+	Content: typeof PageContent
+	Body: typeof PageContent
+	Footer: typeof PageFooter
 }
 ;(Page as PageComponentType).Header = PageHeader
 ;(Page as PageComponentType).Content = PageContent
